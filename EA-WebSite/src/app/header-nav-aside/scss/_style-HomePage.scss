@@ -123,39 +123,39 @@ main h3 {
 }
 
 .battleFieldMainBody {
-  background-image: url("../assets/main/playButtons/Battlefield-2042-4.jpg");
+  background-image: url("../../../assets/homePage/main/playButtons/Battlefield-2042-4.jpg");
 }
 
 .FIFA22MainBody {
-  background-image: url("../assets/main/playButtons/fifa22-gen5-ultimate-edition-packart.jpg");
+  background-image: url("../../../assets/homePage/main/playButtons/fifa22-gen5-ultimate-edition-packart.jpg");
 }
 
 .FI21MainBody {
-  background-image: url("../assets/main/playButtons/fi2021.jpg");
+  background-image: url("../../../assets/homePage/main/playButtons/fi2021.jpg");
 }
 
 .NfSHPMainBody {
-  background-image: url("../assets/main/playButtons/s903xz8pn3gTqY4bcKEAxnBo.jpg");
+  background-image: url("../../../assets/homePage/main/playButtons/s903xz8pn3gTqY4bcKEAxnBo.jpg");
 }
 
 .ApexLegendsMainBody {
-  background-image: url("../assets/main/playButtons/apex-legends.jpg");
+  background-image: url("../../../assets/homePage/main/playButtons/apex-legends.jpg");
 }
 
 .theSims4MainBody {
-  background-image: url("../assets/main/playButtons/theSims4.jpg");
+  background-image: url("../../../assets/homePage/main/playButtons/theSims4.jpg");
 }
 
 .madden22MainBody {
-  background-image: url("../assets/main/playButtons/madden22.jpg");
+  background-image: url("../../../assets/homePage/main/playButtons/madden22.jpg");
 }
 
 .itTakesTwoMainBody {
-  background-image: url("../assets/main/playButtons/itTakesTwo.png");
+  background-image: url("../../../assets/homePage/main/playButtons/itTakesTwo.png");
 }
 
 .gradientAsidePlay {
-  background-image: url("../assets/main/playButtons/gradientAsidePlay.png");
+  background-image: url("../../../assets/homePage/main/playButtons/gradientAsidePlay.png");
 }
 
 .backImgBehaviour {
@@ -276,12 +276,12 @@ main h3 {
 }
 
 .mainHeader {
-  background-image: url("../assets/mainHeader/mainHeader-background-w1456.jpg");
+  background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w1456.jpg");
   @include media("<=tablet") {
-    background-image: url("../assets/mainHeader/mainHeader-background-w1320.jpg");
+    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w1320.jpg");
   }
   @include media("<=phone") {
-    background-image: url("../assets/mainHeader/mainHeader-background-w768.jpg");
+    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w768.jpg");
     background-size: cover;
   }
   margin-top: 90px;
@@ -343,7 +343,7 @@ main h3 {
   margin-top: -7rem;
   width: 100%;
   height: 55rem;
-  background: url("../assets/footer/preFooter/hero-medium-console-7x2-xl.jpg.adapt.crop7x2.1920w.jpg");
+  background: url("../../../assets/homePage/footer/preFooter/hero-medium-console-7x2-xl.jpg.adapt.crop7x2.1920w.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
