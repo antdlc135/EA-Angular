@@ -1,0 +1,122 @@
+:root {
+  --main-colour: #ff4747;
+  --secondary-colour: #eaeaea;
+  --rare-cyan: #5aa0d6;
+  --ea-black: #161616;
+  --ea-dark-color: #161616;
+  --ea-light-color: #f3f3f3;
+  --ea-dark-color-rgb: 22, 22, 22;
+  --ea-light-color-rgb: 243, 243, 243;
+  --origin-brand-color: #f56c2c;
+  --ea-access-brand-color: #0089cd;
+  --xbox-brand-color: #52b043;
+  --playstation-brand-color: #003087;
+  --nintendo-brand-color: #fe0016;
+  --ea-success-color: #00dc8f;
+  --ea-error-color: #ff6969;
+  color: var(--ea-dark-color);
+  --main-font: Verdana, Helvetica;
+  --bottom-footer-font: "Oswald";
+  --legal-font: "Seravek";
+  font-family: var(--main-font);
+  margin: 0;
+}
+.tipography main {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.tipography section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+a {
+  color: #161616;
+  text-decoration: none;
+}
+p,
+.article-content {
+  font-size: 1.12rem;
+  margin: 0;
+}
+h1,
+.banner-title {
+  font-size: 3.4rem;
+  color: var(--origin-brand-color);
+  font-weight: 600;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--playstation-brand-color);
+}
+h3,
+.main-title {
+  font-size: 2.75rem;
+  font-weight: 600;
+}
+h6,
+.banner-subtitle {
+  font-size: 1.12rem;
+  color: #f3f3f3;
+  font-weight: 400;
+}
+.nav-elements {
+  font-size: 1.12rem;
+  text-decoration: none;
+}
+.button-text {
+  font-size: 1.12rem;
+  font-weight: 400;
+}
+.button-white-text {
+  font-size: 1.12rem;
+  font-weight: 400;
+  color: #f3f3f3;
+}
+.article-brand-name {
+  /*stile applicato al nome brand che si trova nella anteprima degli articoli(ultime novità)*/
+  color: #ff4747;
+  font-size: 1rem;
+}
+.article-date {
+  /*stile applicato alle date che si trovano nella anteprima degli articoli(ultime novità)*/
+  font-size: 1rem;
+}
+.article-title {
+  /*titolo degli articoli(ultime novità)*/
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.sub-banner-title {
+  /*banner azzurro parental control prima del footer*/
+  font-size: 1.63rem;
+  font-weight: 600;
+}
+.social-title {
+  /*titolo sopra le icone social del footer*/
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.a-social-footer {
+  /*links social footer*/
+  font-size: 1rem;
+  text-decoration: none;
+}
+.notice-text {
+  /*condizioni, testo in alto all'interno del social footer*/
+  font-size: 0.8rem;
+}
+.a-bottom-footer {
+  /*links bottom footer in grassetto*/
+  font-family: var(--bottom-footer-font);
+  font-size: 1.12rem;
+}
+.text-legal-footer {
+  /*links legal footer*/
+  font-size: 0.8rem;
+  font-weight: 100;
+}
