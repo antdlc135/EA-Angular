@@ -1,1 +1,14 @@
+.toBackGround {
+  width: 100%;
+  position: relative;
+  background-color: #f3f3f3;
+  box-shadow: 5px 0 20px 2px #888888 inset;
+}
 
+.blackBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}

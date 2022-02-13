@@ -1,1 +1,7 @@
-<ea-header-nav-aside></ea-header-nav-aside>
+<ea-header></ea-header>
+
+<div class="toBackGround">
+  <div class="blackBack"></div>
+  <ea-nav (asideOpen)="aside($event)"></ea-nav>
+  <ea-aside [asideOp]="asideOp" (asideClose)="aside($event)"></ea-aside>
+</div>
