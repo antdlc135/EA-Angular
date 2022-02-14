@@ -1,0 +1,129 @@
+main {
+  flex-basis: 100%;
+}
+
+.mainButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 160px;
+  min-height: 60px;
+  border-radius: 3%;
+}
+
+.buttonAndTab > div {
+  display: grid;
+  gap: 150px;
+}
+
+.mainButton > span {
+  z-index: 1;
+}
+
+.divMainButton {
+  min-width: 160px;
+  min-height: 60px;
+  border: 2px solid black;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: inherit;
+  transition: transform 200ms;
+  z-index: 0;
+}
+
+.buttonAndTab > div > .mainButton > .divMainButton {
+  border: none;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.mainBody > .grid > a {
+  position: relative;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 6;
+}
+
+.title > img {
+  width: 45%;
+  transition: transform 200ms ease-out;
+  z-index: 7;
+}
+
+.rgbaBackground {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.battleFieldMainBody {
+  background-image: url("../../../../assets/homePage/main/playButtons/Battlefield-2042-4.jpg");
+}
+
+.FIFA22MainBody {
+  background-image: url("../../../../assets/homePage/main/playButtons/fifa22-gen5-ultimate-edition-packart.jpg");
+}
+
+.FI21MainBody {
+  background-image: url("../../../../assets/homePage/main/playButtons/fi2021.jpg");
+}
+
+.NfSHPMainBody {
+  background-image: url("../../../../assets/homePage/main/playButtons/s903xz8pn3gTqY4bcKEAxnBo.jpg");
+}
+
+.ApexLegendsMainBody {
+  background-image: url("../../../../assets/homePage/main/playButtons/apex-legends.jpg");
+}
+
+.theSims4MainBody {
+  background-image: url("../../../../assets/homePage/main/playButtons/theSims4.jpg");
+}
+
+.madden22MainBody {
+  background-image: url("../../../../assets/homePage/main/playButtons/madden22.jpg");
+}
+
+.itTakesTwoMainBody {
+  background-image: url("../../../../assets/homePage/main/playButtons/itTakesTwo.png");
+}
+
+.gradientAsidePlay {
+  background-image: url("../../../../assets/homePage/main/playButtons/gradientAsidePlay.png");
+}
+
+.backImgBehaviour {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.appendBackgr {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(178, 55, 72, 90%),
+    rgba(65, 31, 66, 90%)
+  );
+  transition: opacity 500ms;
+  position: absolute;
+  opacity: 0;
+}
