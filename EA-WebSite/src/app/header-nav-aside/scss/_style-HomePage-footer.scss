@@ -91,43 +91,57 @@ footer > section > div {
 }
 .selection {
   width: 190px;
-  height: 60px;
+  min-height: 60px;
+  height: 70px;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 1;
 }
 .selected {
-  background-color: var(--ea-light-color);
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: flex-start;
   column-gap: 40px;
-  padding: 18px 15px;
+  padding: 0 20px;
+  position: static;
+  z-index: 1;
 }
-.selected > div > img {
+.selected > div img {
   width: 20px;
   height: 15px;
   padding-right: 5px;
 }
-.selected > div > span {
+.country {
   font-size: 0.8rem;
   font-weight: 500;
 }
-.selected > div {
-  width: 100px;
-  align-items: center;
+.selected-rows {
+  width: 100%;
+  row-gap: 10px;
 }
+.selected-rows > div {
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 .selection-container {
-  border: 2px solid rgb(194, 194, 194);
+  border: 4px solid rgb(194, 194, 194);
+  background-color: var(--ea-light-color);
   border-radius: 5%;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 0;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  // &:hover {
+  //   transform: scale(1.1);
+  //   transition: 300ms;
+  // }
 }
 
 #down-arrow {
@@ -216,28 +230,23 @@ footer > section > div {
   font-size: 0.8rem;
 }
 .lang-mobile-select {
+  border: none;
   position: absolute;
   height: 100%;
   background-color: transparent;
   color: transparent;
   width: 100%;
   z-index: 3;
+  border: 4px solid rgb(194, 194, 194);
+  &:hover {
+    transform: scale(1.03);
+    transition: 400ms;
+  }
 }
 .lang-mobile-select > option {
   color: black;
   background-color: var(--ea-light-color);
   font-size: 1rem;
-}
-
-.lang-mobile-border {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border: 2px solid rgb(194, 194, 194);
-  border-radius: 3%;
-  z-index: 2;
 }
 
 @media all and (max-width: 1430px) {
@@ -293,6 +302,9 @@ footer > section > div {
       width: 100%;
     }
     .selection {
+      display: none;
+    }
+    .onclick-selection {
       display: none;
     }
     .a-social-footer {

@@ -26,9 +26,8 @@ export class FooterComponent implements OnInit {
     const languages: any = document.querySelectorAll('.flag');
     let selected: any = document.querySelector('.selected');
     let socialIcons: any = document.querySelectorAll('.social-icons > svg');
-    let selectedName: any = document.querySelector('.selected span');
+    let selectedName: any = document.querySelector('.country-name');
     let selectedFlag: any = document.querySelector('.selected img');
-    let langMobileBorder: any = document.querySelector('.lang-mobile-border');
     let langMobileSelect: any = document.querySelector('.lang-mobile-select');
     let langMobileOptions: any = document.querySelectorAll(
       '.lang-mobile-options'
@@ -36,33 +35,31 @@ export class FooterComponent implements OnInit {
     let langMobileSpan: any = document.querySelector('.lang-mobile-span');
     let langMobileFlag: any = document.querySelector('.lang-mobile-flag');
 
-    langMobileSelect.onmouseover = () => {
-      langMobileBorder.style.transform = 'scale(1.03)';
-      langMobileBorder.style.transition = '400ms';
+    selected.onmouseover = () => {
+      selectionContainer.style.transform = 'scale(1.1)';
+      selectionContainer.style.transition = '300ms';
     };
-    langMobileSelect.onmouseout = () => {
-      langMobileBorder.style.transform = 'scale(1)';
+    selected.onmouseout = () => {
+      selectionContainer.style.transform = 'scale(1)';
+      selectionContainer.style.transition = '300ms';
     };
-    selectionContainer.onmouseover = () => {
-      selection.style.transform = 'scale(1.1)';
-    };
-    selectionContainer.onmouseout = () => {
-      selection.style.transform = 'scale(1)';
-    };
+
     selection.onclick = () => {
-      selection.style.transform = 'scale(1.1)';
-      document.addEventListener('click', (event) => {
-        if (event.target != selectionContainer) {
-          onclickSelection.style.visibility = 'hidden';
-          defaultCheck.style.visibility = 'hidden';
-          selected.style.boxShadow = 'none';
-          arrow.style.transform = 'rotateX(0)';
-          selectionContainer.style.borderTop = '2px solid rgb(194, 194, 194)';
-        }
-      });
+      // document.addEventListener('click', (event: any) => {
+      //   if (
+      //     onclickSelection.style.visibility == 'visible' &&
+      //     event.target != onclickSelection
+      //   ) {
+      //     onclickSelection.style.visibility = 'hidden';
+      //     defaultCheck.style.visibility = 'hidden';
+      //     selected.style.boxShadow = 'none';
+      //     arrow.style.transform = 'rotateX(0)';
+      //     selectionContainer.style.borderTop = '2px solid rgb(194, 194, 194)';
+      //   }
+      // });
       if (onclickSelection.style.visibility == 'visible') {
         defaultCheck.style.visibility = 'hidden';
-        selected.style.boxShadow = 'none';
+        selectionContainer.style.boxShadow = 'none';
         onclickSelection.style.visibility = 'hidden';
         arrow.style.transform = 'rotateX(0)';
         selectionContainer.style.borderTop = '2px solid rgb(194, 194, 194)';
@@ -70,7 +67,8 @@ export class FooterComponent implements OnInit {
         arrow.style.transform = 'rotateX(180deg)';
         defaultCheck.style.visibility = 'visible';
         onclickSelection.style.visibility = 'visible';
-        selected.style.boxShadow = '0 14px 20px 0 rgba(0, 0, 0, 0.16)';
+        selectionContainer.style.boxShadow =
+          '0 14px 20px 0 rgba(0, 0, 0, 0.16)';
         selectionContainer.style.borderTop = '#f3f3f3';
       }
     };
@@ -81,7 +79,7 @@ export class FooterComponent implements OnInit {
           checked = document.createElement('img');
           checked.setAttribute(
             'src',
-            '../src/assets/footer/bottomFooter/check.png'
+            '../../assets/homePage/footer/bottomFooter/check.png'
           );
           checked.setAttribute('width', '18px');
           checked.setAttribute('height', '18px');
@@ -93,7 +91,7 @@ export class FooterComponent implements OnInit {
           checked = document.createElement('img');
           checked.setAttribute(
             'src',
-            '../src/assets/footer/bottomFooter/check.png'
+            '../../assets/homePage/footer/bottomFooter/check.png'
           );
           checked.setAttribute('width', '18px');
           checked.setAttribute('height', '18px');
