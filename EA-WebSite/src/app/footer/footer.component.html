@@ -38,22 +38,30 @@
     </div>
   </section>
   <section class="bottom-footer display-flex-row">
+    <img
+      src="../../assets/homePage/footer/bottomFooter/october-ea-ring.png"
+      alt="october-ea-ring"
+    />
     <div class="bottom-footer-container">
-      <img
-        src="../../assets/homePage/footer/bottomFooter/october-ea-ring.png"
-        alt="october-ea-ring"
-      />
-      <div class="middle-bottom-footer display-flex-column">
+      <div class="bottom-up-footer display-flex-row">
         <div class="bottom-footer-links a-bottom-footer display-flex-row">
           <a href="#">Libreria dei giochi</a> <a href="#">Registrati</a>
           <a href="#">Origin</a> <a href="#">Informazioni</a>
           <a href="#">Accessibilità</a> <a href="#">Aiuto</a>
         </div>
+        <ea-select-price></ea-select-price>
+        <ea-select-language
+          (changeLang)="changeLangDesk($event)"
+          [langMobName]="langMobName"
+          [langMobFlag]="langMobFlag"
+        ></ea-select-language>
         <ea-select-lang-mobile
           [langDeskName]="langDeskName"
           [langDeskFlag]="langDeskFlag"
           (changeLangMob)="changeLangMob($event)"
         ></ea-select-lang-mobile>
+      </div>
+      <div class="bottom-down-footer display-flex-row">
         <div class="legal-links text-legal-footer display-flex-row">
           <a href="#">Note legali</a> <a href="#">Accordo con l’utente</a>
           <a href="#"
@@ -66,18 +74,12 @@
           <a href="#">Cookie Preferenze</a>
           <span>© 2021 Electronic Arts Inc.</span>
         </div>
-      </div>
-      <div class="bottom-right-footer display-flex-column">
-        <ea-select-language
-          (changeLang)="changeLangDesk($event)"
-          [langMobName]="langMobName"
-          [langMobFlag]="langMobFlag"
-        ></ea-select-language>
-        <div id="google_translate_element"></div>
-        <img
-          src="../../assets/homePage/footer/bottomFooter/seal.svg"
-          alt="seal"
-        />
+        <div class="bottom-right-footer display-flex-column">
+          <img
+            src="../../assets/homePage/footer/bottomFooter/seal.svg"
+            alt="seal"
+          />
+        </div>
       </div>
     </div>
   </section>
