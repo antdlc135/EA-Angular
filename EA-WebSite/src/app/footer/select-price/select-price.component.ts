@@ -6,37 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select-price.component.scss'],
 })
 export class SelectPriceComponent implements OnInit {
-  // regionalPrice = [
-  //   'Austria',
-  //   'Belgio',
-  //   'Croazia',
-  //   'Cipro',
-  //   'Repubblica Ceca',
-  //   'Danimarca',
-  //   'Estonia',
-  //   'Finlandia',
-  //   'Francia',
-  //   'Germania',
-  //   'Grecia',
-  //   'Ungheria',
-  //   'Islanda',
-  //   'Irlanda',
-  //   'Italia',
-  //   'Lettonia',
-  //   'Liechtenstein',
-  //   'Lituania',
-  //   'Lussemburgo',
-  //   'Malta',
-  //   'Paesi Bassi',
-  //   'Norvegia',
-  //   'Polonia',
-  //   'Portogallo',
-  //   'Romania',
-  //   'Slovenia',
-  //   'Spagna',
-  //   'Svezia',
-  //   'Svizzera',
-  // ];
   constructor() {}
 
   ngOnInit(): void {

@@ -10,7 +10,7 @@
           <a href="#">Dichiarazione globale sul rispetto dei diritti umani</a>
         </div>
         <div class="social display-flex-column">
-          <p class="social-title">Partecipa alla conversazione</p>
+          <span class="social-title">Partecipa alla conversazione</span>
           <div class="social-icons display-flex-row">
             <img
               src="../../assets/homePage/footer/bottomFooter/social-icons/facebook_icon.svg"
@@ -55,11 +55,14 @@
           [langMobName]="langMobName"
           [langMobFlag]="langMobFlag"
         ></ea-select-language>
-        <ea-select-lang-mobile
-          [langDeskName]="langDeskName"
-          [langDeskFlag]="langDeskFlag"
-          (changeLangMob)="changeLangMob($event)"
-        ></ea-select-lang-mobile>
+        <div class="select-mobile display-flex-row">
+          <ea-select-lang-mobile
+            [langDeskName]="langDeskName"
+            [langDeskFlag]="langDeskFlag"
+            (changeLangMob)="changeLangMob($event)"
+          ></ea-select-lang-mobile>
+          <ea-select-price-mobile></ea-select-price-mobile>
+        </div>
       </div>
       <div class="bottom-down-footer display-flex-row">
         <div class="legal-links text-legal-footer display-flex-row">

@@ -1,0 +1,25 @@
+<div class="lang-mobile">
+  <select class="lang-mobile-select">
+    <option
+      class="lang-mobile-options"
+      *ngFor="let region of regions"
+      value="{{ region }}"
+    >
+      {{ region }}
+    </option>
+  </select>
+  <span>Prezzi Regionali</span>
+  <div class="country">
+    <img
+      class="lang-mobile-flag"
+      src="../../assets/homePage/footer/bottomFooter/flags/it.png"
+      alt="flag"
+    />
+    <span class="lang-mobile-span">Italia</span>
+    <img
+      src="../../assets/homePage/footer/bottomFooter/down-arrow.png"
+      alt="down-arrow"
+      class="lang-mobile-arrow"
+    />
+  </div>
+</div>

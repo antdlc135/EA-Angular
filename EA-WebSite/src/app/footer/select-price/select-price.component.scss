@@ -1,5 +1,5 @@
-@import "../../header-nav-aside/scss/style-HomePage-footer";
-@import "../../header-nav-aside/scss/style-HomePage-footer_tipography";
+@import "../footer.component.scss"; //necessary to import footer tipography
+@import "../select-language/select-language.component.scss"; //necessary to import footer tipography
 
 .selection-price {
   width: 190px;

@@ -26,12 +26,6 @@ export class SelectLangMobileComponent implements OnInit {
     langMobileSpan.innerText = this.defaultCountryName;
     langMobileFlag.src = this.defaultCountryFlag;
   }
-  ngOnChanges() {
-    let langMobileSpan: any = document.querySelector('.lang-mobile-span');
-    let langMobileFlag: any = document.querySelector('.lang-mobile-flag');
-    langMobileSpan.innerText = this.langDeskName;
-    langMobileFlag.src = this.langDeskFlag;
-  }
 
   langMobileAnim() {
     let langMobileSpan: any = document.querySelector('.lang-mobile-span');
@@ -42,7 +36,7 @@ export class SelectLangMobileComponent implements OnInit {
     );
 
     langMobileOptions.forEach((option: any, index: any) => {
-      langMobileSelect.addEventListener('click', (event: any) => {
+      option.addEventListener('click', (event: any) => {
         if (index == event.target.selectedIndex) {
           langMobileSpan.innerText = option.innerText;
           langMobileFlag.src = option.dataset.img;

@@ -1,2 +1,131 @@
-@import "../../header-nav-aside/scss/style-HomePage-footer";
-@import "../../header-nav-aside/scss/style-HomePage-footer_tipography";
+@import "../footer.component.scss"; //necessary to import footer tipography
+
+.selection {
+  width: 190px;
+  min-height: 60px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.selected,
+.selected-price {
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  column-gap: 40px;
+  padding: 0 20px;
+  position: static;
+  z-index: 1;
+}
+.selected > div img,
+.selected-price > div img {
+  width: 20px;
+  height: 15px;
+  padding-right: 5px;
+}
+.country,
+.country-price {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.selected-rows,
+.selected-rows-price {
+  width: 100%;
+  row-gap: 10px;
+}
+.selected-rows > div,
+.selected-rows-price > div {
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.selection-container,
+.selection-container-price {
+  border: 4px solid rgb(194, 194, 194);
+  background-color: var(--ea-light-color);
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#down-arrow,
+#down-arrow-price {
+  width: 20px;
+  height: 20px;
+}
+.onclick-selection {
+  width: max-content;
+  height: 600px;
+  position: absolute;
+  background-color: var(--ea-light-color);
+  bottom: 65px;
+  right: -15px;
+  border: 2px solid rgb(194, 194, 194);
+  visibility: hidden;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 14px 20px 0 rgba(0, 0, 0, 0.16);
+}
+.flags,
+.flags-price {
+  width: 90%;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 45px;
+}
+.flags > *,
+.flags-price > * {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.199);
+  padding-bottom: 0.4rem;
+  cursor: pointer;
+  font-size: 15px;
+}
+.flags > div:hover,
+.flags-price > div:hover {
+  padding-left: 0.8rem;
+  transition-duration: 0.2s;
+}
+#mex,
+#ne,
+#tr {
+  border-bottom: none;
+}
+.check {
+  width: 18px;
+  height: 18px;
+  float: right;
+  visibility: hidden;
+}
+#default-check,
+#default-check-price {
+  visibility: hidden;
+}
+#google_translate_element {
+  visibility: hidden;
+}
+
+@media all and (max-width: 1430px) {
+}
+@media all and (max-width: 1006px) {
+  .selection {
+    display: none;
+  }
+  .onclick-selection {
+    display: none;
+  }
+}
+
+@media all and (max-width: 640px) {
+}
