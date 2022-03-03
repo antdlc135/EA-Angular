@@ -7,8 +7,6 @@ import { FooterComponent } from './footer/footer.component';
 import { PreFooterComponent } from './home-page/pre-footer/pre-footer.component';
 import { SelectLanguageComponent } from './footer/select-language/select-language.component';
 import { SelectLangMobileComponent } from './footer/select-lang-mobile/select-lang-mobile.component';
-import { SelectPriceComponent } from './footer/select-price/select-price.component';
-import { SelectPriceMobileComponent } from './footer/select-price-mobile/select-price-mobile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,8 +16,6 @@ import { SelectPriceMobileComponent } from './footer/select-price-mobile/select-
     PreFooterComponent,
     SelectLanguageComponent,
     SelectLangMobileComponent,
-    SelectPriceComponent,
-    SelectPriceMobileComponent,
   ],
   imports: [BrowserModule],
   providers: [],

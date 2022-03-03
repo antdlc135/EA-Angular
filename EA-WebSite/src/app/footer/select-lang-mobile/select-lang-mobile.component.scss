@@ -15,14 +15,14 @@
 }
 .country {
   width: 90%;
-  justify-content: space-between;
+  justify-content: flex-start;
+  display: flex;
 }
 
 .lang-mobile-flag {
-  position: absolute;
-  left: 20px;
+  padding-left: 15px;
   width: 18px;
-  z-index: 1;
+  height: 16px;
 }
 
 .lang-mobile > div > img:last-of-type {
@@ -33,10 +33,7 @@
 }
 
 .lang-mobile > div > span {
-  position: absolute;
-  left: 45px;
-  z-index: 1;
-  font-size: 0.8rem;
+  padding-left: 15px;
 }
 .lang-mobile-select {
   border: none;

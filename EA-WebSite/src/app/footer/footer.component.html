@@ -49,19 +49,38 @@
           <a href="#">Origin</a> <a href="#">Informazioni</a>
           <a href="#">Accessibilità</a> <a href="#">Aiuto</a>
         </div>
-        <ea-select-price></ea-select-price>
         <ea-select-language
+          id="price"
+          [title]="title[0]"
+          [selectData]="selectData[0]"
+          [priceOpened]="priceOpened"
+          (click)="sendRegions()"
+        ></ea-select-language>
+        <ea-select-language
+          id="lang"
+          [title]="title[1]"
+          [selectData]="selectData[1]"
+          [languageOpened]="languageOpened"
+          (click)="sendLanguages()"
           (changeLang)="changeLangDesk($event)"
-          [langMobName]="langMobName"
-          [langMobFlag]="langMobFlag"
         ></ea-select-language>
         <div class="select-mobile display-flex-row">
           <ea-select-lang-mobile
+            [priceMobOpened]="priceMobOpened"
+            (click)="clickMob('price')"
+            id="mob-price"
+            [title]="title[0]"
+            [selectData]="selectData[0]"
             [langDeskName]="langDeskName"
             [langDeskFlag]="langDeskFlag"
-            (changeLangMob)="changeLangMob($event)"
           ></ea-select-lang-mobile>
-          <ea-select-price-mobile></ea-select-price-mobile>
+          <ea-select-lang-mobile
+            [languageMobOpened]="languageMobOpened"
+            (click)="clickMob('lang')"
+            id="mob-lang"
+            [title]="title[1]"
+            [selectData]="selectData[1]"
+          ></ea-select-lang-mobile>
         </div>
       </div>
       <div class="bottom-down-footer display-flex-row">

@@ -7,14 +7,365 @@ import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
+  selectData = [
+    [
+      {
+        id: '',
+        img: '',
+        span: 'Austria',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Belgio',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Croazia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Cipro',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Repubblica Ceca',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Danimarca',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Estonia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Finlandia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Francia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Germania',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Grecia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Ungheria',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Islanda',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Irlanda',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Italia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Lettonia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Liechtenstein',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Lituania',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Lussemburgo',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Malta',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Paesi Bassi',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Norvegia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Polonia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Portogallo',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Romania',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Slovenia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Spagna',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Svezia',
+      },
+      {
+        id: '',
+        img: '',
+        span: 'Svizzera',
+      },
+    ],
+    [
+      {
+        id: 'en',
+        img: '../../assets/homePage/footer/bottomFooter/flags/us.png',
+        span: 'United States',
+      },
+      {
+        id: 'ru',
+        img: '../../assets/homePage/footer/bottomFooter/flags/ru.png',
+        span: 'Россия',
+      },
+      {
+        id: 'no',
+        img: '../../assets/homePage/footer/bottomFooter/flags/nor.png',
+        span: 'Norge',
+      },
+      {
+        id: 'en',
+        img: '../../assets/homePage/footer/bottomFooter/flags/uk.png',
+        span: 'United Kingdom',
+      },
+      {
+        id: 'es',
+        img: '../../assets/homePage/footer/bottomFooter/flags/es.png',
+        span: 'España',
+      },
+      {
+        id: 'sv',
+        img: '../../assets/homePage/footer/bottomFooter/flags/sw.png',
+        span: 'Sverige',
+      },
+      {
+        id: 'en',
+        img: '../../assets/homePage/footer/bottomFooter/flags/aus.png',
+        span: 'Australia',
+      },
+      {
+        id: 'cs',
+        img: '../../assets/homePage/footer/bottomFooter/flags/ck.png',
+        span: 'Česká republika',
+      },
+      {
+        id: 'zh-CN',
+        img: '',
+        span: '中国',
+      },
+      {
+        id: 'fr',
+        img: '../../assets/homePage/footer/bottomFooter/flags/fr.png',
+        span: 'France',
+      },
+      {
+        id: 'en',
+        img: '../../assets/homePage/footer/bottomFooter/flags/ca.png',
+        span: 'Canada(En)',
+      },
+      {
+        id: 'ko',
+        img: '../../assets/homePage/footer/bottomFooter/flags/kr.png',
+        span: '대한민국',
+      },
+      {
+        id: 'de',
+        img: '../../assets/homePage/footer/bottomFooter/flags/de.png',
+        span: 'Deustschland',
+      },
+      {
+        id: 'fr',
+        img: '../../assets/homePage/footer/bottomFooter/flags/ca.png',
+        span: 'Canada(Fr)',
+      },
+      {
+        id: 'de',
+        img: '../../assets/homePage/footer/bottomFooter/flags/de.png',
+        span: 'Deustschland',
+      },
+      {
+        id: 'zh-TW',
+        img: '',
+        span: '繁體中文',
+      },
+      {
+        id: 'it',
+        img: '../../assets/homePage/footer/bottomFooter/flags/it.png',
+        span: 'Italia',
+      },
+      {
+        id: 'da',
+        img: '../../assets/homePage/footer/bottomFooter/flags/dan.png',
+        span: 'Danmark',
+      },
+      {
+        id: 'ja',
+        img: '../../assets/homePage/footer/bottomFooter/flags/jp.png',
+        span: '日本',
+      },
+      {
+        id: 'pl',
+        img: '../../assets/homePage/footer/bottomFooter/flags/pl.png',
+        span: 'Polska',
+      },
+      {
+        id: 'pt',
+        img: '../../assets/homePage/footer/bottomFooter/flags/bl.png',
+        span: 'Brasil',
+      },
+      {
+        id: 'fi',
+        img: '../../assets/homePage/footer/bottomFooter/flags/fin.png',
+        span: 'Suomi',
+      },
+      {
+        id: 'es',
+        img: '../../assets/homePage/footer/bottomFooter/flags/mex.png',
+        span: 'México',
+      },
+      {
+        id: 'nl',
+        img: '../../assets/homePage/footer/bottomFooter/flags/ne.png',
+        span: 'Nederland',
+      },
+      {
+        id: 'tk',
+        img: '../../assets/homePage/footer/bottomFooter/flags/tr.png',
+        span: 'Türkiye',
+      },
+    ],
+  ];
+  mobileData = [
+    [
+      'Austria',
+      'Belgio',
+      'Croazia',
+      'Cipro',
+      'Repubblica Ceca',
+      'Danimarca',
+      'Estonia',
+      'Finlandia',
+      'Francia',
+      'Germania',
+      'Grecia',
+      'Ungheria',
+      'Islanda',
+      'Irlanda',
+      'Italia',
+      'Lettonia',
+      'Liechtenstein',
+      'Lituania',
+      'Lussemburgo',
+      'Malta',
+      'Paesi Bassi',
+      'Norvegia',
+      'Polonia',
+      'Portogallo',
+      'Romania',
+      'Slovenia',
+      'Spagna',
+      'Svezia',
+      'Svizzera',
+    ],
+    [
+      'United States',
+      'United Kingdom',
+      'Australia',
+      'France',
+      'Deutschland',
+      'Italia',
+      '日本',
+      'Polska',
+      'Brasil',
+      'Россия',
+      'España',
+      'Česká republika',
+      'Canada (En)',
+      'Canada (Fr)',
+      'Danmark',
+      'Suomi',
+      'México',
+      'Nederland',
+      'Norge',
+      'Sverige',
+      '中国',
+      '대한민국',
+      '繁體中文',
+      'Türkiye',
+    ],
+  ];
+  title = ['Prezzi Regionali', 'Lingua'];
+  languageOpened = false;
+  priceOpened = false;
+  languageMobOpened = false;
+  priceMobOpened = false;
+  childData!: any;
   langDeskName!: any;
   langDeskFlag!: any;
   langMobName!: any;
   langMobFlag!: any;
+  flags!: boolean;
 
   constructor() {}
 
   ngOnInit(): void {}
+  clickMob(component: string) {
+    if (component === 'price') {
+      this.priceMobOpened = true;
+      this.languageMobOpened = false;
+    } else if (component === 'lang') {
+      this.priceMobOpened = false;
+      this.languageMobOpened = true;
+    }
+  }
   changeLangDesk(data: any) {
     this.langDeskName = data[0];
     this.langDeskFlag = data[1];
@@ -22,5 +373,21 @@ export class FooterComponent implements OnInit {
   changeLangMob(data: any) {
     this.langMobName = data[0];
     this.langMobFlag = data[1];
+  }
+  sendRegions() {
+    if (this.priceOpened) {
+      this.priceOpened = false;
+    } else {
+      this.priceOpened = true;
+      this.languageOpened = false;
+    }
+  }
+  sendLanguages() {
+    if (this.languageOpened) {
+      this.languageOpened = false;
+    } else {
+      this.languageOpened = true;
+      this.priceOpened = false;
+    }
   }
 }

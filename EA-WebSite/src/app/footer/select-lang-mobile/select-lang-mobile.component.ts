@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Attribute, Component, OnInit } from '@angular/core';
 import { EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
@@ -12,7 +12,12 @@ export class SelectLangMobileComponent implements OnInit {
   defaultCountryName: string = 'Italia';
   langFlag!: string;
   langName!: string;
+  flag!: any;
   newLangFromMobile!: any;
+  @Input() title!: string;
+  @Input() selectData!: any;
+  @Input() priceMobOpened!: boolean;
+  @Input() languageMobOpened!: boolean;
   @Input() langDeskName!: string;
   @Input() langDeskFlag!: string;
   @Output() changeLangMob = new EventEmitter<any>();
@@ -24,7 +29,25 @@ export class SelectLangMobileComponent implements OnInit {
     let langMobileSpan: any = document.querySelector('.lang-mobile-span');
     let langMobileFlag: any = document.querySelector('.lang-mobile-flag');
     langMobileSpan.innerText = this.defaultCountryName;
-    langMobileFlag.src = this.defaultCountryFlag;
+    // langMobileFlag.src = this.defaultCountryFlag;
+  }
+  changeCountry(event: any) {
+    let MobilePriceSpan: any = document.querySelector(
+      '#mob-price .lang-mobile-span'
+    );
+    let MobileLangSpan: any = document.querySelector(
+      '#mob-lang .lang-mobile-span'
+    );
+    let langMobileFlag: any = document.querySelector(
+      '#mob-lang .lang-mobile-flag'
+    );
+    if (this.priceMobOpened) {
+      MobilePriceSpan.innerText = event.target.value;
+    } else if (this.languageMobOpened) {
+      MobileLangSpan.innerText = event.target.value;
+      let option = event.target.selectedIndex;
+      langMobileFlag.src = event.target.options.item(option).dataset.flag;
+    }
   }
 
   langMobileAnim() {
@@ -37,6 +60,7 @@ export class SelectLangMobileComponent implements OnInit {
 
     langMobileOptions.forEach((option: any, index: any) => {
       option.addEventListener('click', (event: any) => {
+        console.log('click');
         if (index == event.target.selectedIndex) {
           langMobileSpan.innerText = option.innerText;
           langMobileFlag.src = option.dataset.img;

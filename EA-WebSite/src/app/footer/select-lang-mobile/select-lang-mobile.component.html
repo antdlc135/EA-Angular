@@ -1,167 +1,17 @@
 <div class="lang-mobile">
-  <select class="lang-mobile-select">
+  <select (change)="changeCountry($event)" class="lang-mobile-select">
     <option
-      value="en"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/us.png"
-      class="lang-mobile-options"
+      *ngFor="let singleData of selectData"
+      [attr.data-flag]="singleData.img"
+      value="{{ singleData.span }}"
     >
-      United States
-    </option>
-    <option
-      value="en"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/uk.png"
-      class="lang-mobile-options"
-    >
-      United Kingdom
-    </option>
-    <option
-      value="en"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/aus.png"
-      class="lang-mobile-options"
-    >
-      Australia
-    </option>
-    <option
-      value="fr"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/fr.png"
-      class="lang-mobile-options"
-    >
-      France
-    </option>
-    <option
-      value="de"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/de.png"
-      class="lang-mobile-options"
-    >
-      Deustschland
-    </option>
-    <option
-      value="it"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/it.png"
-      class="lang-mobile-options"
-    >
-      Italia
-    </option>
-    <option
-      value="ja"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/jp.png"
-      class="lang-mobile-options"
-    >
-      日本
-    </option>
-    <option
-      value="pl"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/pl.png"
-      class="lang-mobile-options"
-    >
-      Polska
-    </option>
-    <option
-      value="pt"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/bl.png"
-      class="lang-mobile-options"
-    >
-      Brasil
-    </option>
-    <option
-      value="ru"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/ru.png"
-      class="lang-mobile-options"
-    >
-      Россия
-    </option>
-    <option
-      value="es"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/es.png"
-      class="lang-mobile-options"
-    >
-      España
-    </option>
-    <option
-      value="en"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/ca.png"
-      class="lang-mobile-options"
-    >
-      Canada(En)
-    </option>
-    <option
-      value="cs"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/ck.png"
-      class="lang-mobile-options"
-    >
-      Česká republika
-    </option>
-    <option
-      value="fr"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/ca.png"
-      class="lang-mobile-options"
-    >
-      Canada(Fr)
-    </option>
-    <option
-      value="da"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/dan.png"
-      class="lang-mobile-options"
-    >
-      Danmark
-    </option>
-    <option
-      value="fi"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/fin.png"
-      class="lang-mobile-options"
-    >
-      Suomi
-    </option>
-    <option
-      value="es"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/mex.png"
-      class="lang-mobile-options"
-    >
-      México
-    </option>
-    <option
-      value="nl"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/ne.png"
-      class="lang-mobile-options"
-    >
-      Nederland
-    </option>
-    <option
-      value="no"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/nor.png"
-      class="lang-mobile-options"
-    >
-      Norge
-    </option>
-    <option
-      value="sv"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/sw.png"
-      class="lang-mobile-options"
-    >
-      Sverige
-    </option>
-    <option value="zh-CN" data-img="" class="lang-mobile-options">中国</option>
-    <option
-      value="ko"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/kr.png"
-      class="lang-mobile-options"
-    >
-      대한민국
-    </option>
-    <option value="zh-TW" data-img="" class="lang-mobile-options">
-      繁體中文
-    </option>
-    <option
-      value="tk"
-      data-img="../../assets/homePage/footer/bottomFooter/flags/tr.png"
-      class="lang-mobile-options"
-    >
-      Türkiye
+      {{ singleData.span }}
     </option>
   </select>
-  <span>Lingua</span>
+  <span>{{ title }}</span>
   <div class="country">
     <img
+      *ngIf="title === 'Lingua'"
       class="lang-mobile-flag"
       src="../../assets/homePage/footer/bottomFooter/flags/it.png"
       alt="flag"
