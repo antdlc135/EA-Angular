@@ -6,11 +6,11 @@
         <div class="country">
           <img
             *ngIf="title == 'Lingua'"
-            src="../../assets/homePage/footer/bottomFooter/flags/it.png"
+            src="{{ langFlag }}"
             alt="italian-flag"
             class="selection-flag"
           />
-          <span class="country-name"> Italia </span>
+          <span class="country-name"> {{ langName }} </span>
         </div>
         <img
           src="../../assets/homePage/footer/bottomFooter/down-arrow.png"

@@ -13,10 +13,10 @@
     <img
       *ngIf="title === 'Lingua'"
       class="lang-mobile-flag"
-      src="../../assets/homePage/footer/bottomFooter/flags/it.png"
+      src="{{ countryFlag }}"
       alt="flag"
     />
-    <span class="lang-mobile-span">Italia</span>
+    <span class="lang-mobile-span">{{ countryName }}</span>
     <img
       src="../../assets/homePage/footer/bottomFooter/down-arrow.png"
       alt="down-arrow"

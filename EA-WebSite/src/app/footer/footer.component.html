@@ -66,17 +66,14 @@
         ></ea-select-language>
         <div class="select-mobile display-flex-row">
           <ea-select-lang-mobile
+            (mobilePriceOut)="priceFromMobile($event)"
             [priceMobOpened]="priceMobOpened"
-            (click)="clickMob('price')"
             id="mob-price"
             [title]="title[0]"
             [selectData]="selectData[0]"
-            [langDeskName]="langDeskName"
-            [langDeskFlag]="langDeskFlag"
           ></ea-select-lang-mobile>
           <ea-select-lang-mobile
             [languageMobOpened]="languageMobOpened"
-            (click)="clickMob('lang')"
             id="mob-lang"
             [title]="title[1]"
             [selectData]="selectData[1]"

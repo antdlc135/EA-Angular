@@ -347,6 +347,8 @@ export class FooterComponent implements OnInit {
   priceOpened = false;
   languageMobOpened = false;
   priceMobOpened = false;
+  langNameFromMobile!: any;
+  priceMobile!: string;
   childData!: any;
   langDeskName!: any;
   langDeskFlag!: any;
@@ -365,6 +367,9 @@ export class FooterComponent implements OnInit {
       this.priceMobOpened = false;
       this.languageMobOpened = true;
     }
+  }
+  priceFromMobile(price: any) {
+    this.priceMobile = price;
   }
   changeLangDesk(data: any) {
     this.langDeskName = data[0];
