@@ -1,14 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SelectService {
   constructor() {}
-  getAllLanguages() {
-    // return this.languages;
-  }
-  getAllRegions() {
-    // return this.regions;
-  }
+  language = new Subject<string[]>();
 }

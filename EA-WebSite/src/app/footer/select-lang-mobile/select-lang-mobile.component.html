@@ -3,7 +3,9 @@
     <option
       *ngFor="let singleData of selectData"
       [attr.data-flag]="singleData.img"
-      value="{{ singleData.span }}"
+      [attr.data-id]="singleData.id"
+      [attr.data-span]="singleData.span"
+      value="{{ singleData.id }}"
     >
       {{ singleData.span }}
     </option>

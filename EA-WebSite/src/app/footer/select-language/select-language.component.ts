@@ -23,19 +23,30 @@ export class SelectLanguageComponent implements OnInit {
   @Input() priceOpened!: any;
   @Output() changeLang = new EventEmitter();
   @Input() langNameFromMobile!: any;
-  constructor() {}
+  constructor(private selectService: SelectService) {}
 
   ngOnInit(): void {}
 
   change(): void {
     this.changeLang.emit(this.selectedLang);
   }
-  changeCountry(span: any, img: any, event: any) {
+  changeCountry(id: any, span: any, img: any, event: any) {
     if (this.priceOpened) {
       this.langName = event.target.innerText;
     } else if (this.languageOpened) {
       this.langName = event.target.innerText;
       this.langFlag = img;
+    }
+    let googleSelect: any = document.querySelector(
+      '#google_translate_element select'
+    );
+    for (let i = 0; i < googleSelect.children.length; i++) {
+      let option = googleSelect.children[i];
+      if (option.value == id) {
+        googleSelect.selectedIndex = i;
+        googleSelect.dispatchEvent(new Event('change'));
+        break;
+      }
     }
   }
 }
