@@ -283,78 +283,20 @@ export class FooterComponent implements OnInit {
       },
     ],
   ];
-  mobileData = [
-    [
-      'Austria',
-      'Belgio',
-      'Croazia',
-      'Cipro',
-      'Repubblica Ceca',
-      'Danimarca',
-      'Estonia',
-      'Finlandia',
-      'Francia',
-      'Germania',
-      'Grecia',
-      'Ungheria',
-      'Islanda',
-      'Irlanda',
-      'Italia',
-      'Lettonia',
-      'Liechtenstein',
-      'Lituania',
-      'Lussemburgo',
-      'Malta',
-      'Paesi Bassi',
-      'Norvegia',
-      'Polonia',
-      'Portogallo',
-      'Romania',
-      'Slovenia',
-      'Spagna',
-      'Svezia',
-      'Svizzera',
-    ],
-    [
-      'United States',
-      'United Kingdom',
-      'Australia',
-      'France',
-      'Deutschland',
-      'Italia',
-      '日本',
-      'Polska',
-      'Brasil',
-      'Россия',
-      'España',
-      'Česká republika',
-      'Canada (En)',
-      'Canada (Fr)',
-      'Danmark',
-      'Suomi',
-      'México',
-      'Nederland',
-      'Norge',
-      'Sverige',
-      '中国',
-      '대한민국',
-      '繁體中文',
-      'Türkiye',
-    ],
-  ];
   title = ['Prezzi Regionali', 'Lingua'];
   languageOpened = false;
   priceOpened = false;
   languageMobOpened = false;
   priceMobOpened = false;
   langNameFromMobile!: any;
-  priceMobile!: string;
   childData!: any;
-  langDeskName!: any;
-  langDeskFlag!: any;
-  langMobName!: any;
-  langMobFlag!: any;
   flags!: boolean;
+  priceMobile!: any;
+  langFromMobile!: any;
+  flagMobile!: any;
+  langDesk!: any;
+  flagDesk!: any;
+  priceFromDesk!: string;
 
   constructor() {}
 
@@ -367,17 +309,6 @@ export class FooterComponent implements OnInit {
       this.priceMobOpened = false;
       this.languageMobOpened = true;
     }
-  }
-  priceFromMobile(price: any) {
-    this.priceMobile = price;
-  }
-  changeLangDesk(data: any) {
-    this.langDeskName = data[0];
-    this.langDeskFlag = data[1];
-  }
-  changeLangMob(data: any) {
-    this.langMobName = data[0];
-    this.langMobFlag = data[1];
   }
   sendRegions() {
     if (this.priceOpened) {
@@ -394,5 +325,21 @@ export class FooterComponent implements OnInit {
       this.languageOpened = true;
       this.priceOpened = false;
     }
+  }
+  languageFromMobile(data: any) {
+    this.langFromMobile = data;
+  }
+  flagFromMobile(data: any) {
+    this.flagMobile = data;
+  }
+  langFromDesk(data: any) {
+    this.langDesk = data[0];
+    this.flagDesk = data[1];
+  }
+  priceFromMobile(data: any) {
+    this.priceMobile = data;
+  }
+  priceDesk(data: string) {
+    this.priceFromDesk = data;
   }
 }

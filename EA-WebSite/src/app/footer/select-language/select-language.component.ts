@@ -5,7 +5,6 @@ import {
   Output,
   OnChanges,
   EventEmitter,
-  SimpleChanges,
 } from '@angular/core';
 import { SelectService } from '../shared/select.service';
 @Component({
@@ -13,23 +12,35 @@ import { SelectService } from '../shared/select.service';
   templateUrl: './select-language.component.html',
   styleUrls: ['./select-language.component.scss'],
 })
-export class SelectLanguageComponent implements OnInit {
-  selectedLang!: any;
+export class SelectLanguageComponent implements OnInit, OnChanges {
+  selectedLang = '../../assets/homePage/footer/bottomFooter/flags/it.png';
   langName = 'Italia';
-  langFlag = '../../assets/homePage/footer/bottomFooter/flags/it.png';
+  langFlag!: string;
   @Input() title!: any;
   @Input() selectData!: any;
   @Input() languageOpened!: any;
   @Input() priceOpened!: any;
-  @Output() changeLang = new EventEmitter();
-  @Input() langNameFromMobile!: any;
+  @Input() priceMobile!: string;
+  @Input() langFromMobile!: any;
+  @Input() flagMobile!: any;
+  @Output() langFromdesk = new EventEmitter<any>();
+  @Output() priceDesk = new EventEmitter<string>();
   constructor(private selectService: SelectService) {}
 
-  ngOnInit(): void {}
-
-  change(): void {
-    this.changeLang.emit(this.selectedLang);
+  ngOnChanges() {
+    if (this.langFromMobile) {
+      this.langName = this.langFromMobile;
+      this.langFlag = this.flagMobile;
+    }
+    if (this.priceMobile) {
+      this.langName = this.priceMobile;
+    }
   }
+  ngOnInit(): void {
+    this.langName = 'Italia';
+    this.langFlag = '../../assets/homePage/footer/bottomFooter/flags/it.png';
+  }
+
   changeCountry(id: any, span: any, img: any, event: any) {
     if (this.priceOpened) {
       this.langName = event.target.innerText;
@@ -48,5 +59,8 @@ export class SelectLanguageComponent implements OnInit {
         break;
       }
     }
+    let lang = [this.langName, this.langFlag];
+    this.langFromdesk.emit(lang);
+    this.priceDesk.emit(this.langName);
   }
 }

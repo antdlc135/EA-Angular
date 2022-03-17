@@ -1,4 +1,4 @@
-import { Attribute, Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
@@ -6,7 +6,7 @@ import { EventEmitter, Output, Input } from '@angular/core';
   templateUrl: './select-lang-mobile.component.html',
   styleUrls: ['./select-lang-mobile.component.scss'],
 })
-export class SelectLangMobileComponent implements OnInit {
+export class SelectLangMobileComponent implements OnInit, OnChanges {
   countryFlag: string =
     '../../assets/homePage/footer/bottomFooter/flags/it.png';
   countryName = 'Italia';
@@ -14,8 +14,24 @@ export class SelectLangMobileComponent implements OnInit {
   @Input() selectData!: any;
   @Input() priceMobOpened!: boolean;
   @Input() languageMobOpened!: boolean;
+  @Input() langDesk!: any;
+  @Input() flagDesk!: any;
+  @Input() priceFromDesk!: string;
+  @Output() languageFromMobile = new EventEmitter<any>();
+  @Output() flagFromMobile = new EventEmitter<any>();
+  @Output() priceMobile = new EventEmitter<any>();
 
   constructor() {}
+  ngOnChanges(): void {
+    if (this.langDesk) {
+      this.countryName = this.langDesk;
+      this.countryFlag = this.flagDesk;
+      console.log(this.countryFlag);
+    }
+    if (this.priceFromDesk) {
+      this.countryName = this.priceFromDesk;
+    }
+  }
 
   ngOnInit(): void {}
   changeCountry(event: any) {
@@ -35,6 +51,7 @@ export class SelectLangMobileComponent implements OnInit {
       }
     }
 
-    console.log(event.target.options.item(option).dataset.id);
+    this.languageFromMobile.emit(this.countryName);
+    this.flagFromMobile.emit(this.countryFlag);
   }
 }

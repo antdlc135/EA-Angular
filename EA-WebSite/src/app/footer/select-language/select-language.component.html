@@ -32,7 +32,7 @@
         "
       >
         <img
-          *ngIf="languageOpened"
+          *ngIf="languageOpened && singleData.img"
           [src]="singleData.img"
           [alt]="singleData.id"
         />

@@ -54,6 +54,8 @@
           [title]="title[0]"
           [selectData]="selectData[0]"
           [priceOpened]="priceOpened"
+          [priceMobile]="priceMobile"
+          (priceDesk)="priceDesk($event)"
           (click)="sendRegions()"
         ></ea-select-language>
         <ea-select-language
@@ -61,22 +63,30 @@
           [title]="title[1]"
           [selectData]="selectData[1]"
           [languageOpened]="languageOpened"
+          [langFromMobile]="langFromMobile"
+          [flagMobile]="flagMobile"
           (click)="sendLanguages()"
-          (changeLang)="changeLangDesk($event)"
+          (langFromdesk)="langFromDesk($event)"
         ></ea-select-language>
         <div class="select-mobile display-flex-row">
           <ea-select-lang-mobile
             (mobilePriceOut)="priceFromMobile($event)"
+            (languageFromMobile)="priceFromMobile($event)"
             [priceMobOpened]="priceMobOpened"
             id="mob-price"
             [title]="title[0]"
             [selectData]="selectData[0]"
+            [priceFromDesk]="priceFromDesk"
           ></ea-select-lang-mobile>
           <ea-select-lang-mobile
+            (languageFromMobile)="languageFromMobile($event)"
+            (flagFromMobile)="flagFromMobile($event)"
             [languageMobOpened]="languageMobOpened"
             id="mob-lang"
             [title]="title[1]"
             [selectData]="selectData[1]"
+            [langDesk]="langDesk"
+            [flagDesk]="flagDesk"
           ></ea-select-lang-mobile>
         </div>
       </div>
