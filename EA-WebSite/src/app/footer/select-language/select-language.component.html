@@ -37,6 +37,13 @@
           [alt]="singleData.id"
         />
         <span>{{ singleData.span }}</span>
+        <img
+          width="18px"
+          *ngIf="singleData.span == langName"
+          class="check"
+          src="../../../assets/homePage/footer/bottomFooter/check.png"
+          alt="check"
+        />
       </div>
     </div>
   </div>

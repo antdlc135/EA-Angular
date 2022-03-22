@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
   selector: 'ea-footer',
@@ -227,9 +226,9 @@ export class FooterComponent implements OnInit {
         span: 'Canada(Fr)',
       },
       {
-        id: 'de',
-        img: '../../assets/homePage/footer/bottomFooter/flags/de.png',
-        span: 'Deustschland',
+        id: 'zh-CN',
+        img: '',
+        span: '中国',
       },
       {
         id: 'zh-TW',

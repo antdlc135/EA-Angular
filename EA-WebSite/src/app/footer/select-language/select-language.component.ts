@@ -6,7 +6,6 @@ import {
   OnChanges,
   EventEmitter,
 } from '@angular/core';
-import { SelectService } from '../shared/select.service';
 @Component({
   selector: 'ea-select-language',
   templateUrl: './select-language.component.html',
@@ -25,7 +24,7 @@ export class SelectLanguageComponent implements OnInit, OnChanges {
   @Input() flagMobile!: any;
   @Output() langFromdesk = new EventEmitter<any>();
   @Output() priceDesk = new EventEmitter<string>();
-  constructor(private selectService: SelectService) {}
+  constructor() {}
 
   ngOnChanges() {
     if (this.langFromMobile) {
@@ -45,7 +44,7 @@ export class SelectLanguageComponent implements OnInit, OnChanges {
     if (this.priceOpened) {
       this.langName = event.target.innerText;
     } else if (this.languageOpened) {
-      this.langName = event.target.innerText;
+      this.langName = event.target.inqwnerText;
       this.langFlag = img;
     }
     let googleSelect: any = document.querySelector(
