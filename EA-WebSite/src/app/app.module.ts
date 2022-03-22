@@ -3,25 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { MainComponent } from './home-page/main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { AsideComponent } from './aside/aside.component';
 import { NavComponent } from './nav/nav.component';
-import { MainHeaderComponent } from './home-page/main/main-header/main-header.component';
-import { MainBodyComponent } from './home-page/main/main-body/main-body.component';
-import { MainCardsComponent } from './home-page/main/main-cards/main-cards.component';
+import { MainHeaderComponent } from './home-page/main-header/main-header.component';
+import { MainBodyComponent } from './home-page/main-body/main-body.component';
+import { MainCardsComponent } from './home-page/main-cards/main-cards.component';
+import { PreFooterComponent } from './home-page/pre-footer/pre-footer.component';
+import { FooterComponent } from './footer/footer.component';
+import { SelectLangMobileComponent } from './footer/select-lang-mobile/select-lang-mobile.component';
+import { SelectLanguageComponent } from './footer/select-language/select-language.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    MainComponent,
     HeaderComponent,
     AsideComponent,
     NavComponent,
     MainHeaderComponent,
     MainBodyComponent,
     MainCardsComponent,
+    PreFooterComponent,
+    SelectLangMobileComponent,
+    SelectLanguageComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule],
   providers: [],

@@ -1,0 +1,50 @@
+<div class="selection display-flex-row">
+  <div class="selected display-flex-row">
+    <div class="selected-rows display-flex-column">
+      <span>{{ title }}</span>
+      <div class="display-flex-row">
+        <div class="country">
+          <img
+            *ngIf="title == 'Lingua'"
+            src="{{ langFlag }}"
+            alt="italian-flag"
+            class="selection-flag"
+          />
+          <span class="country-name"> {{ langName }} </span>
+        </div>
+        <img
+          src="../../assets/homePage/footer/bottomFooter/down-arrow.png"
+          alt="down arrow"
+          id="down-arrow"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="selection-container"></div>
+  <div *ngIf="languageOpened || priceOpened" class="onclick-selection">
+    <div class="flags">
+      <div
+        *ngFor="let singleData of selectData"
+        class="flag"
+        [id]="singleData.id"
+        (click)="
+          changeCountry(singleData.id, singleData.span, singleData.img, $event)
+        "
+      >
+        <img
+          *ngIf="languageOpened && singleData.img"
+          [src]="singleData.img"
+          [alt]="singleData.id"
+        />
+        <span>{{ singleData.span }}</span>
+        <img
+          width="18px"
+          *ngIf="singleData.span == langName"
+          class="check"
+          src="../../../assets/homePage/footer/bottomFooter/check.png"
+          alt="check"
+        />
+      </div>
+    </div>
+  </div>
+</div>

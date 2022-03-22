@@ -1,0 +1,115 @@
+<footer>
+  <section class="social-footer" id="social-footer">
+    <div>
+      <div class="links-n-icon display-flex-row">
+        <div class="a-social-footer display-flex-row" id="a-social-footer">
+          <a href="#">Rapporto sull'impatto</a> <a href="#">Dirigenza</a>
+          <a href="#">Sicurezza e privacy</a>
+          <a href="#">Attività politiche</a>
+          <a href="#">Segnala un problema</a>
+          <a href="#">Dichiarazione globale sul rispetto dei diritti umani</a>
+        </div>
+        <div class="social display-flex-column">
+          <span class="social-title">Partecipa alla conversazione</span>
+          <div class="social-icons display-flex-row">
+            <img
+              src="../../assets/homePage/footer/bottomFooter/social-icons/facebook_icon.svg"
+              alt="Facebook Logo"
+            />
+            <img
+              src="../../assets/homePage/footer/bottomFooter/social-icons/twitter_bird_icon.svg"
+              alt="Twitter Logo"
+            />
+            <img
+              src="../../assets/homePage/footer/bottomFooter/social-icons/play_video_youtube_youtube%20logo_icon.svg"
+              alt="Youtube Logo"
+            />
+            <img
+              src="../../assets/homePage/footer/bottomFooter/social-icons/instagram_icon.svg"
+              alt="Instagram Logo"
+            />
+            <img
+              src="../../assets/homePage/footer/bottomFooter/social-icons/twitch_icon.svg"
+              alt="Twitch Logo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bottom-footer display-flex-row">
+    <img
+      src="../../assets/homePage/footer/bottomFooter/october-ea-ring.png"
+      alt="october-ea-ring"
+    />
+    <div class="bottom-footer-container">
+      <div class="bottom-up-footer display-flex-row">
+        <div class="bottom-footer-links a-bottom-footer display-flex-row">
+          <a href="#">Libreria dei giochi</a> <a href="#">Registrati</a>
+          <a href="#">Origin</a> <a href="#">Informazioni</a>
+          <a href="#">Accessibilità</a> <a href="#">Aiuto</a>
+        </div>
+        <ea-select-language
+          id="price"
+          [title]="title[0]"
+          [selectData]="selectData[0]"
+          [priceOpened]="priceOpened"
+          [priceMobile]="priceMobile"
+          (priceDesk)="priceDesk($event)"
+          (click)="sendRegions()"
+        ></ea-select-language>
+        <ea-select-language
+          id="lang"
+          [title]="title[1]"
+          [selectData]="selectData[1]"
+          [languageOpened]="languageOpened"
+          [langFromMobile]="langFromMobile"
+          [flagMobile]="flagMobile"
+          (click)="sendLanguages()"
+          (langFromdesk)="langFromDesk($event)"
+        ></ea-select-language>
+        <div class="select-mobile display-flex-row">
+          <ea-select-lang-mobile
+            (mobilePriceOut)="priceFromMobile($event)"
+            (languageFromMobile)="priceFromMobile($event)"
+            [priceMobOpened]="priceMobOpened"
+            id="mob-price"
+            [title]="title[0]"
+            [selectData]="selectData[0]"
+            [priceFromDesk]="priceFromDesk"
+          ></ea-select-lang-mobile>
+          <ea-select-lang-mobile
+            (languageFromMobile)="languageFromMobile($event)"
+            (flagFromMobile)="flagFromMobile($event)"
+            [languageMobOpened]="languageMobOpened"
+            id="mob-lang"
+            [title]="title[1]"
+            [selectData]="selectData[1]"
+            [langDesk]="langDesk"
+            [flagDesk]="flagDesk"
+          ></ea-select-lang-mobile>
+        </div>
+      </div>
+      <div class="bottom-down-footer display-flex-row">
+        <div class="legal-links text-legal-footer display-flex-row">
+          <a href="#">Note legali</a> <a href="#">Accordo con l’utente</a>
+          <a href="#"
+            >Politica sulla privacy e sui cookie (i tuoi diritti sulla
+            privacy)</a
+          >
+          <a href="#">Aggiornamenti sui servizi online</a>
+          <a href="#">Termini di servizio di YouTube</a>
+          <a href="#">Norme sulla privacy di Google</a>
+          <a href="#">Cookie Preferenze</a>
+          <span>© 2021 Electronic Arts Inc.</span>
+        </div>
+        <div class="bottom-right-footer display-flex-column">
+          <img
+            src="../../assets/homePage/footer/bottomFooter/seal.svg"
+            alt="seal"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>

@@ -124,12 +124,12 @@ $breakpoints: (
 }
 
 .mainHeader {
-  background-image: url("../../../../assets/homePage/mainHeader/mainHeader-background-w1456.jpg");
+  background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w1456.jpg");
   @include media("<=tablet") {
-    background-image: url("../../../../assets/homePage/mainHeader/mainHeader-background-w1320.jpg");
+    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w1320.jpg");
   }
   @include media("<=phone") {
-    background-image: url("../../../../assets/homePage/mainHeader/mainHeader-background-w768.jpg");
+    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w768.jpg");
     background-size: cover;
   }
   margin-top: 90px;

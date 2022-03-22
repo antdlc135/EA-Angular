@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   @Output() asideOpen: EventEmitter<any> = new EventEmitter();
+  @Output() navTag: EventEmitter<any> = new EventEmitter();
   constructor() {}
   // @Output() navIn!:any;
 
@@ -15,13 +16,15 @@ export class NavComponent implements OnInit {
   }
 
   nav() {
-    let circleSup: any = window.document.querySelector('.circlesSuperPosition');
+    const navTag: any = document.querySelector('nav');
+    let circleSup: any = document.querySelector('.circlesSuperPosition');
     let circle: any = document.querySelectorAll('.nav-circle');
     let std: any = circleSup.firstElementChild;
     let big: any = std.nextElementSibling;
-    // let toBackGround: any = document.querySelector('.toBackGround');
     let divNavMenu: any = document.querySelectorAll('nav > .navMenu > div');
     // let OpenOnPhone = document.querySelector('.OpenAsideOnPhone');
+
+    this.navTag.emit(navTag);
 
     divNavMenu.forEach((el: any) => {
       el.onmouseover = () => {

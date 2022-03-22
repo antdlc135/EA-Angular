@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'ea-header',
@@ -6,14 +6,21 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Output() headerTag: any = document.querySelector('header');
+  @Output() headerTag: EventEmitter<any> = new EventEmitter();
+  @Input() nav: any;
+  @Input() toBackGround!: any;
   constructor() {}
 
   ngOnInit(): void {
     this.header();
   }
 
+  ngOnChanges() {
+    this.header();
+  }
+
   header() {
+    let header = document.querySelector('header');
     let headerHeight: any = document.querySelector('.headerHeight');
     let headerSheets: any = document.querySelectorAll('.headerHeight> section');
     let closeHeader: any = document.querySelector('.headerHeight>.closeHeader');
@@ -23,6 +30,10 @@ export class HeaderComponent implements OnInit {
     let helpSect: any = document.querySelector('#helpSect');
     let headerSVGa: any = document.querySelectorAll('header > section');
     let EA: any = document.querySelector('header > a');
+    let toBackGround: any = document.querySelector('.toBackGround');
+    let nav: any = document.querySelector('nav');
+
+    this.headerTag.emit(header);
 
     EA.onmouseover = () => {
       EA.firstElementChild.setAttribute('fill', '#8B8B8B');
@@ -60,22 +71,22 @@ export class HeaderComponent implements OnInit {
       headerHeight.firstElementChild.style.transition = 'none';
       headerHeight.firstElementChild.style.opacity = 0;
       headerHeight.style.minHeight = 0;
-      // nav.style.top = '33px';
+      nav.style.top = '33px';
       headerHeight.classList.remove('headerHeightShad');
-      // body.style.overflow = 'scroll';
+      toBackGround.style.overflow = 'scroll';
     };
 
     let openHeaderHeight = () => {
       closeHeader.style.opacity = 1;
       headerHeight.firstElementChild.style.transition = '500ms';
       headerHeight.firstElementChild.style.opacity = 1;
-      if (window.pageYOffset != 0) {
+      if (window.scrollY != 0) {
         headerHeight.style.top = '-35px';
-        // nav.style.top = '-1px';
+        nav.style.top = '-1px';
       }
       headerHeight.style.minHeight = '25rem';
       headerHeight.classList.add('headerHeightShad');
-      // body.style.overflow = 'hidden';
+      toBackGround.style.overflow = 'hidden';
     };
 
     let decolorHeadIcon = () => {
@@ -117,10 +128,10 @@ export class HeaderComponent implements OnInit {
               }
             }
           };
-          // toBackGround.onclick = () => {
-          //   closeAll();
-          //   return eachHeaderSVG();
-          // };
+          toBackGround.onclick = () => {
+            closeAll();
+            return eachHeaderSVG();
+          };
           closeHeader.onclick = () => {
             closeAll();
             return eachHeaderSVG();
