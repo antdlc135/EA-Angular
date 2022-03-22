@@ -87,6 +87,8 @@
   align-items: center;
   box-shadow: 0 14px 20px 0 rgba(0, 0, 0, 0.16);
   overflow: hidden;
+  flex-wrap: wrap;
+  padding-right: 2rem;
 }
 
 .region-list {

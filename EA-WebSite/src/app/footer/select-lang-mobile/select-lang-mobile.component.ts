@@ -1,5 +1,6 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { EventEmitter, Output, Input } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'ea-select-lang-mobile',
@@ -26,7 +27,6 @@ export class SelectLangMobileComponent implements OnInit, OnChanges {
     if (this.langDesk) {
       this.countryName = this.langDesk;
       this.countryFlag = this.flagDesk;
-      console.log(this.countryFlag);
     }
     if (this.priceFromDesk) {
       this.countryName = this.priceFromDesk;
@@ -36,8 +36,9 @@ export class SelectLangMobileComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
   changeCountry(event: any) {
     let option = event.target.selectedIndex;
-    this.countryName = event.target.options.item(option).dataset.span;
-    this.countryFlag = event.target.options.item(option).dataset.flag;
+
+    // this.countryName = event.target.options.item(option).dataset.span;
+    // this.countryFlag = event.target.options.item(option).dataset.flag;
     let googleSelect: any = document.querySelector(
       '#google_translate_element select'
     );

@@ -12,8 +12,9 @@ import {
   styleUrls: ['./select-language.component.scss'],
 })
 export class SelectLanguageComponent implements OnInit, OnChanges {
-  selectedLang = '../../assets/homePage/footer/bottomFooter/flags/it.png';
-  langName = 'Italia';
+  selectedLang!: string;
+  langName!: string;
+  changedCountry = false;
   langFlag!: string;
   @Input() title!: any;
   @Input() selectData!: any;
@@ -36,17 +37,21 @@ export class SelectLanguageComponent implements OnInit, OnChanges {
     }
   }
   ngOnInit(): void {
-    this.langName = 'Italia';
-    this.langFlag = '../../assets/homePage/footer/bottomFooter/flags/it.png';
+    if (!this.changedCountry) {
+      this.langName = 'Italia';
+      this.langFlag = '../../assets/homePage/footer/bottomFooter/flags/it.png';
+      console.log(this.changedCountry);
+    }
   }
 
   changeCountry(id: any, span: any, img: any, event: any) {
     if (this.priceOpened) {
       this.langName = event.target.innerText;
     } else if (this.languageOpened) {
-      this.langName = event.target.inqwnerText;
+      this.langName = span;
       this.langFlag = img;
     }
+    localStorage.setItem('countryName', this.langName);
     let googleSelect: any = document.querySelector(
       '#google_translate_element select'
     );
@@ -58,6 +63,7 @@ export class SelectLanguageComponent implements OnInit, OnChanges {
         break;
       }
     }
+    this.changedCountry = true;
     let lang = [this.langName, this.langFlag];
     this.langFromdesk.emit(lang);
     this.priceDesk.emit(this.langName);

@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ea-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'EA-WebSite';
   asideOp!: boolean;
   nav!: any;
