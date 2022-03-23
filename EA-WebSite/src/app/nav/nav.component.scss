@@ -33,6 +33,15 @@ nav > .navMenu > div {
   gap: 6px;
   cursor: pointer;
   min-height: 75px;
+  &:hover {
+    & > span > div {
+      max-height: 320px;
+      & > section {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
 
 nav > .navMenu > div > span {

@@ -31,14 +31,6 @@ export class NavComponent implements OnInit {
         el.firstElementChild.nextElementSibling.style.transform = 'rotateX(0)';
         el.firstElementChild.nextElementSibling.setAttribute('fill', 'red');
         el.style.color = '#ff4747';
-        el.firstElementChild.firstElementChild.style.maxHeight = '320px';
-        el.firstElementChild.firstElementChild
-          .querySelectorAll('section')
-          .forEach((element: any) => {
-            debugger;
-            element.style.opacity = '1';
-            element.style.visibility = 'visible';
-          });
       };
     });
     divNavMenu.forEach((el: any) => {
@@ -47,13 +39,6 @@ export class NavComponent implements OnInit {
           'rotateX(180deg)';
         el.firstElementChild.nextElementSibling.setAttribute('fill', 'intial');
         el.style.color = 'initial';
-        el.firstElementChild.firstElementChild.style.maxHeight = '0';
-        el.firstElementChild.firstElementChild
-          .querySelectorAll('section')
-          .forEach((element: any) => {
-            element.style.opacity = 0;
-            element.style.visibility = 'hidden';
-          });
       };
     });
 

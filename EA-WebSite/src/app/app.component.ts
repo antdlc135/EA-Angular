@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'ea-root',
@@ -13,6 +13,13 @@ export class AppComponent {
 
   ngOnInit() {
     this.toBackGround = document.querySelector('.toBackGround');
+  }
+
+  onclickAsideClose() {
+    let aside: any = document.querySelector('aside');
+    aside.style.left = '-410px';
+    aside.style.top = '-30px';
+    this.asideOp = false;
   }
 
   aside(x: boolean) {
