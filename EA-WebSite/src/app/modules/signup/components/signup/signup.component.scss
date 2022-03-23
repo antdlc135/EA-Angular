@@ -1,0 +1,145 @@
+@import "../../../../footer/footer.component.scss";
+
+body {
+  background-color: #1d2033;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+
+a {
+  color: #5288fd;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.wrapper {
+  min-height: 80%;
+  min-width: 20%;
+  max-height: 900px;
+  max-width: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  text-align: center;
+}
+
+.wrapper p {
+  font-size: 14px;
+}
+.EA-logo {
+  width: 64px;
+}
+
+h1 {
+  color: white;
+  font-size: 1.5em;
+}
+
+form {
+  width: 100%;
+  row-gap: 20px;
+  text-align: left;
+}
+.birthday {
+  width: 100%;
+}
+
+select {
+  background-color: #141b20;
+  min-width: 32%;
+  height: 45px;
+  border: 2px solid rgb(118, 118, 118);
+  border-radius: 10px;
+  color: rgb(118, 118, 118);
+  margin-top: 10px;
+  font-size: 16px;
+  &:hover {
+    border-color: rgb(184, 182, 182);
+    color: white;
+    transition: 300ms;
+    cursor: pointer;
+  }
+}
+
+option {
+  background-color: white;
+  color: black;
+}
+
+.submit {
+  height: 45px;
+  background-color: #343647;
+  border-radius: 10px;
+  color: rgb(118, 118, 118);
+  border: none;
+  cursor: not-allowed;
+}
+.country-select > select {
+  width: 100%;
+}
+
+.above-social {
+  color: rgb(118, 118, 118);
+  position: relative;
+  width: 100%;
+  position: relative;
+}
+
+.above-social > p {
+  background-color: #1d2033;
+  position: absolute;
+  top: -20;
+  left: 120;
+  padding: 10px;
+}
+
+.separator {
+  background-color: rgb(118, 118, 118);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+}
+.social-logos {
+  justify-content: space-around;
+  column-gap: 10px;
+}
+.social-logos img {
+  width: 25px;
+}
+
+.social-logos > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  &:hover {
+    transform: scale(0.95);
+    transition: 300ms;
+  }
+}
+
+#facebook {
+  background-color: #1877f2;
+}
+#apple {
+  background-color: white;
+}
+#steam {
+  background-color: black;
+}
+#xbox {
+  background-color: #107c10;
+}
+#playstation {
+  background-color: #0049a0;
+}

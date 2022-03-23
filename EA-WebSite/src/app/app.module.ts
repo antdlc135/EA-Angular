@@ -1,6 +1,3 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +10,11 @@ import { PreFooterComponent } from './home-page/pre-footer/pre-footer.component'
 import { FooterComponent } from './footer/footer.component';
 import { SelectLangMobileComponent } from './footer/select-lang-mobile/select-lang-mobile.component';
 import { SelectLanguageComponent } from './footer/select-language/select-language.component';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { SignupModule } from './modules/signup/signup.module';
+import { AppContainerComponent } from './app-container.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,10 @@ import { SelectLanguageComponent } from './footer/select-language/select-languag
     SelectLangMobileComponent,
     SelectLanguageComponent,
     FooterComponent,
+    AppContainerComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, SignupModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppContainerComponent],
 })
 export class AppModule {}

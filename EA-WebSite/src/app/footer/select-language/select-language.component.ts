@@ -40,16 +40,16 @@ export class SelectLanguageComponent implements OnInit, OnChanges {
     if (!this.changedCountry) {
       this.langName = 'Italia';
       this.langFlag = '../../assets/homePage/footer/bottomFooter/flags/it.png';
-      console.log(this.changedCountry);
     }
   }
 
   changeCountry(id: any, span: any, img: any, event: any) {
     if (this.priceOpened) {
-      this.langName = event.target.innerText;
+      this.langName = span;
     } else if (this.languageOpened) {
       this.langName = span;
       this.langFlag = img;
+      console.log(this.langName);
     }
     localStorage.setItem('countryName', this.langName);
     let googleSelect: any = document.querySelector(
