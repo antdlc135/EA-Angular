@@ -35,6 +35,7 @@ export class NavComponent implements OnInit {
         el.firstElementChild.firstElementChild
           .querySelectorAll('section')
           .forEach((element: any) => {
+            debugger;
             element.style.opacity = '1';
             element.style.visibility = 'visible';
           });
@@ -75,6 +76,7 @@ export class NavComponent implements OnInit {
     // OpenOnPhone.onclick = onclickAsideOpen;
   }
   openAside() {
+    debugger;
     this.asideOpen.emit(true);
   }
 }

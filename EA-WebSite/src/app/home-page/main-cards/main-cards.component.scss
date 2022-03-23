@@ -1,3 +1,13 @@
+@import "include-media";
+
+$breakpoints: (
+  desktop: 1455px,
+  tablet: 1031px,
+  middlepoint: 1186px,
+  handheld: 1023px,
+  phone: 767px,
+);
+
 h3 {
   font-size: 2.2rem;
   font-weight: 800;
@@ -54,11 +64,26 @@ h3 {
 }
 
 .buttonAndTab {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, fit-content);
-  width: 1100px;
-  gap: 17px;
+  @include media(">=middlepoint") {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, fit-content);
+    max-width: 1100px;
+    gap: 17px;
+  }
+  @include media("<=middlepoint") {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, fit-content);
+    gap: 17px;
+  }
+  @include media("<=phone") {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, fit-content);
+    gap: 17px;
+  }
 }
 
 .buttonAndTab h3 {
@@ -79,13 +104,28 @@ h3 {
 }
 
 .tab {
+  div > div {
+    padding: 0;
+  }
   display: flex;
   flex-direction: column;
-  width: 368px;
   position: relative;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   transition: transform 300ms ease-out;
   background-color: white;
+  @include media("<=handheld") {
+    text-align: center;
+    div > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    width: 100%;
+    img,
+    p {
+      display: none;
+    }
+  }
 }
 
 .tab::before {

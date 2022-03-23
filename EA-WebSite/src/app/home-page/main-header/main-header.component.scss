@@ -1,8 +1,10 @@
 @import "include-media";
 
 $breakpoints: (
-  tablet: 1455px,
-  phone: 1031px,
+  desktop: 1455px,
+  tablet: 1031px,
+  handheld: 1023px,
+  phone: 767px,
 );
 
 .backImgBehaviour {
@@ -124,13 +126,21 @@ $breakpoints: (
 }
 
 .mainHeader {
-  background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w1456.jpg");
-  @include media("<=tablet") {
-    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w1320.jpg");
+  @include media(">desktop") {
+    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w1920.jpg");
+  }
+  @include media(">tablet", "<=desktop") {
+    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-max-w1456.jpg");
+  }
+  @include media(">handheld", "<=tablet") {
+    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-min-w1455.jpg");
+  }
+  @include media(">phone", "<=handheld") {
+    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w1023.jpg");
   }
   @include media("<=phone") {
-    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w768.jpg");
-    background-size: cover;
+    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w320-768.jpg");
+    background-position-y: top;
   }
   margin-top: 90px;
   height: 58vh;
@@ -199,11 +209,33 @@ $breakpoints: (
       text-align: center;
     }
   }
-  background: linear-gradient(
-    to left,
-    rgba(178, 55, 72, 90%),
-    rgba(11, 10, 97, 0.9)
-  );
+  @include media(">desktop") {
+    background-image: url("../../../assets/homePage/mainHeader/foot-mainHeader-background-max-w1456.jpg");
+    background-position-y: top;
+    background-size: cover;
+  }
+  @include media(">tablet", "<=desktop") {
+    background-image: url("../../../assets/homePage/mainHeader/foot-mainHeader-background-w1024.jpg");
+    background-size: cover;
+    background-position-y: 20%;
+  }
+  @include media(">handheld", "<=tablet") {
+    background-image: url("../../../assets/homePage/mainHeader/foot-mainHeader-background-max-w1320.jpg");
+    background-position-y: top;
+    background-size: cover;
+  }
+  @include media(">phone", "<=handheld") {
+    background-image: url("../../../assets/homePage/mainHeader/foot-mainHeader-background-w1024.jpg");
+    background-position-y: top;
+    background-size: cover;
+    background-position-y: 20%;
+  }
+  @include media("<=phone") {
+    background-image: url("../../../assets/homePage/mainHeader/foot-mainHeader-background-w768.jpg");
+    background-position-y: top;
+    background-size: cover;
+    background-position-y: 20%;
+  }
   height: 100px;
   width: 100%;
   align-items: center;

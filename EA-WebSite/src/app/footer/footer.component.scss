@@ -1,3 +1,6 @@
+* {
+  box-sizing: content-box;
+}
 :root {
   margin: 0;
   padding: 0;
@@ -20,7 +23,7 @@
 }
 .social-footer {
   background-color: var(--secondary-colour);
-  padding: 3.5rem 8rem 3.5rem 13vw;
+  padding: 3.5rem 8rem 3.5rem 8rem;
 }
 
 .links-n-icon {
@@ -55,7 +58,7 @@ footer > section {
 }
 .bottom-footer {
   background-color: var(--ea-light-color);
-  padding: 3rem 8rem 3rem 13vw;
+  padding: 3rem 8rem 3rem 8rem;
   justify-content: center;
 }
 .bottom-footer-container {
@@ -172,10 +175,6 @@ ea-select-price {
     grid-template-rows: 1fr;
     align-items: center;
   }
-  // .lang-mobile {
-  //   display: flex;
-  //   width: 100%;
-  // }
 
   .a-social-footer {
     width: 100%;
