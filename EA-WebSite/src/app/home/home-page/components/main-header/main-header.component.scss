@@ -134,19 +134,19 @@ $breakpoints: (
 
 .mainHeader {
   @include media(">desktop") {
-    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w1920.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-w1920.jpg");
   }
   @include media(">tablet", "<=desktop") {
-    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-max-w1456.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-max-w1456.jpg");
   }
   @include media(">handheld", "<=tablet") {
-    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-min-w1455.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-min-w1455.jpg");
   }
   @include media(">phone", "<=handheld") {
-    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w1023.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-w1023.jpg");
   }
   @include media("<=phone") {
-    background-image: url("../../../assets/homePage/mainHeader/mainHeader-background-w320-768.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-w320-768.jpg");
     background-position-y: top;
   }
   margin-top: 90px;
@@ -217,28 +217,28 @@ $breakpoints: (
     }
   }
   @include media(">desktop") {
-    background-image: url("../../../assets/homePage/mainHeader/foot-mainHeader-background-max-w1456.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/foot-mainHeader-background-max-w1456.jpg");
     background-position-y: top;
     background-size: cover;
   }
   @include media(">tablet", "<=desktop") {
-    background-image: url("../../../assets/homePage/mainHeader/foot-mainHeader-background-w1024.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/foot-mainHeader-background-w1024.jpg");
     background-size: cover;
     background-position-y: 20%;
   }
   @include media(">handheld", "<=tablet") {
-    background-image: url("../../../assets/homePage/mainHeader/foot-mainHeader-background-max-w1320.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/foot-mainHeader-background-max-w1320.jpg");
     background-position-y: top;
     background-size: cover;
   }
   @include media(">phone", "<=handheld") {
-    background-image: url("../../../assets/homePage/mainHeader/foot-mainHeader-background-w1024.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/foot-mainHeader-background-w1024.jpg");
     background-position-y: top;
     background-size: cover;
     background-position-y: 20%;
   }
   @include media("<=phone") {
-    background-image: url("../../../assets/homePage/mainHeader/foot-mainHeader-background-w768.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/foot-mainHeader-background-w768.jpg");
     background-position-y: top;
     background-size: cover;
     background-position-y: 20%;
