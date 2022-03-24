@@ -7,7 +7,7 @@ import { MainHeaderComponent } from './home-page/components/main-header/main-hea
 import { MainBodyComponent } from './home-page/components/main-body/main-body.component';
 import { MainCardsComponent } from './home-page/components/main-cards/main-cards.component';
 import { PreFooterComponent } from './home-page/components/pre-footer/pre-footer.component';
-import { HomeRoutingModule } from './home.routing.module';
+// import { HomeRoutingModule } from './home.routing.module';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { SharedModule } from '../shared/shared.module';
     MainCardsComponent,
     PreFooterComponent,
   ],
-  imports: [CommonModule, SharedModule, HomeRoutingModule],
+  imports: [CommonModule, SharedModule],
   exports: [
     HomePageComponent,
     NavComponent,
