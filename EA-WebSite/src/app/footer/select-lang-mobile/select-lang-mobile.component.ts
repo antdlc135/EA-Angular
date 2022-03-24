@@ -1,3 +1,4 @@
+import { ConditionalExpr } from '@angular/compiler';
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { EventEmitter, Output, Input } from '@angular/core';
 import { Subject } from 'rxjs';
@@ -29,16 +30,25 @@ export class SelectLangMobileComponent implements OnInit, OnChanges {
       this.countryFlag = this.flagDesk;
     }
     if (this.priceFromDesk) {
-      this.countryName = this.priceFromDesk;
+      let mobPrice: any = document.querySelector('#mob-price #mob-lang-span');
+      mobPrice.textContent = this.priceFromDesk;
     }
   }
 
   ngOnInit(): void {}
   changeCountry(event: any) {
+    let mobPrice: any = document.querySelector('#mob-price #mob-lang-span');
+    let mobLang: any = document.querySelector('#mob-lang #mob-lang-span');
     let option = event.target.selectedIndex;
-
-    // this.countryName = event.target.options.item(option).dataset.span;
-    // this.countryFlag = event.target.options.item(option).dataset.flag;
+    if (event.target.options.length == 29) {
+      mobPrice.textContent = event.target.options.item(option).dataset.span;
+      this.countryName = event.target.options.item(option).dataset.span;
+      console.log(this.countryName);
+    } else {
+      mobLang.textContent = event.target.options.item(option).dataset.span;
+      this.countryName = event.target.options.item(option).dataset.span;
+      this.countryFlag = event.target.options.item(option).dataset.flag;
+    }
     let googleSelect: any = document.querySelector(
       '#google_translate_element select'
     );
@@ -46,7 +56,6 @@ export class SelectLangMobileComponent implements OnInit, OnChanges {
       let option2 = googleSelect.children[i];
       if (option2.value == event.target.options.item(option).dataset.id) {
         googleSelect.selectedIndex = i;
-        console.log(i);
         googleSelect.dispatchEvent(new Event('change'));
         break;
       }

@@ -29,11 +29,14 @@ export class SelectLanguageComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     if (this.langFromMobile) {
-      this.langName = this.langFromMobile;
+      let langSpan: any = document.querySelector('#lang .country-name');
+      langSpan.textContent = this.langFromMobile;
       this.langFlag = this.flagMobile;
+      console.log('change');
     }
     if (this.priceMobile) {
-      this.langName = this.priceMobile;
+      let priceSpan: any = document.querySelector('#price .country-name');
+      priceSpan.textContent = this.priceMobile;
     }
   }
   ngOnInit(): void {
@@ -44,14 +47,19 @@ export class SelectLanguageComponent implements OnInit, OnChanges {
   }
 
   changeCountry(id: any, span: any, img: any, event: any) {
+    let langSpan: any = document.querySelector('#lang .country-name');
     if (this.priceOpened) {
+      let priceSpan: any = document.querySelector('#price .country-name');
+      priceSpan.textContent = span;
       this.langName = span;
+      this.priceMobile = span;
     } else if (this.languageOpened) {
       this.langName = span;
       this.langFlag = img;
-      console.log(this.langName);
+      this.flagMobile = img;
+      this.langFromMobile = span;
+      langSpan.textContent = span;
     }
-    localStorage.setItem('countryName', this.langName);
     let googleSelect: any = document.querySelector(
       '#google_translate_element select'
     );
