@@ -3,14 +3,14 @@
     <div class="selected-rows display-flex-column">
       <span>{{ title }}</span>
       <div class="display-flex-row">
-        <div class="country">
+        <div class="country display-flex-row">
           <img
             *ngIf="title == 'Lingua'"
             src="{{ langFlag }}"
             alt="italian-flag"
             class="selection-flag"
           />
-          <span class="country-name"> {{ langName }} </span>
+          <span class="country-name"> Italia </span>
         </div>
         <img
           src="../../assets/homePage/footer/bottomFooter/down-arrow.png"

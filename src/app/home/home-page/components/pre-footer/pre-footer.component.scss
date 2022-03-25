@@ -57,14 +57,15 @@
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   column-gap: 1rem;
 }
 .parental-control-title {
   width: 55%;
 }
 .parental-control-title > h2 {
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 600;
   color: #161616;
 }
 
@@ -96,7 +97,7 @@
 .divMainButton {
   min-width: 160px;
   min-height: 60px;
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 3px;
   position: absolute;
   top: 0;
@@ -111,8 +112,16 @@
 }
 
 //buttons style (end)
+@media all and (max-width: 1200px) {
+  .parental-control-content {
+    justify-content: space-around;
+  }
+}
 
 @media all and (max-width: 1006px) {
+  .banner-hero-content {
+    padding-left: 4rem;
+  }
   .banner-hero-content > p {
     width: 90vw;
     padding-right: 5rem;

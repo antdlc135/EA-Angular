@@ -29,29 +29,39 @@ export class SelectLanguageComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     if (this.langFromMobile) {
-      this.langName = this.langFromMobile;
+      let langSpan: any = document.querySelector('#lang .country-name');
+      langSpan.textContent = this.langFromMobile;
       this.langFlag = this.flagMobile;
+      console.log('change');
     }
     if (this.priceMobile) {
-      this.langName = this.priceMobile;
+      let priceSpan: any = document.querySelector('#price .country-name');
+      priceSpan.textContent = this.priceMobile;
     }
   }
   ngOnInit(): void {
     if (!this.changedCountry) {
       this.langName = 'Italia';
       this.langFlag = '../../assets/homePage/footer/bottomFooter/flags/it.png';
-      console.log(this.changedCountry);
     }
   }
 
   changeCountry(id: any, span: any, img: any, event: any) {
+    let langSpan: any = document.querySelector('#lang .country-name');
     if (this.priceOpened) {
-      this.langName = event.target.innerText;
+      let priceSpan: any = document.querySelector('#price .country-name');
+      priceSpan.textContent = span;
+      this.langName = span;
+      this.priceMobile = span;
     } else if (this.languageOpened) {
+      let mobLang: any = document.querySelector('#mob-lang #mob-lang-span');
+      mobLang.textContent = span;
       this.langName = span;
       this.langFlag = img;
+      this.flagMobile = img;
+      this.langFromMobile = span;
+      langSpan.textContent = span;
     }
-    localStorage.setItem('countryName', this.langName);
     let googleSelect: any = document.querySelector(
       '#google_translate_element select'
     );

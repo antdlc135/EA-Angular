@@ -1,1 +1,283 @@
-<p>signup works!</p>
+<div class="big-wrapper">
+  <div class="wrapper display-flex-column">
+    <img
+      class="EA-logo"
+      src="../../../../../assets/homePage/footer/bottomFooter/october-ea-ring.png"
+      alt="logo"
+    />
+    <h1>Crea un account EA</h1>
+    <p>
+      Basterà seguire pochi passaggi per completare il tuo account EA (è veloce,
+      promesso).
+    </p>
+    <form [formGroup]="form" class="signUp display-flex-column">
+      <div class="country-select">
+        <p>PAESE/REGIONE</p>
+        <select
+          name="country"
+          id="country"
+          formControlName="country"
+          [ngClass]="{ selected: form.controls['country'].touched }"
+        >
+          <option *ngFor="let country of countries" value="{{ country }}">
+            {{ country }}
+          </option>
+        </select>
+      </div>
+      <div class="birthday">
+        <p>DATA DI NASCITA</p>
+        <div class="birthday-select">
+          <select
+            name="day"
+            id="day"
+            formControlName="day"
+            [ngClass]="{ selected: form.controls['day'].touched }"
+          >
+            <option value="">Giorno</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <select
+            name="month"
+            id="month"
+            formControlName="month"
+            [ngClass]="{ selected: form.controls['month'].touched }"
+          >
+            <option value="">Mese</option>
+            <option value="Gennaio">Gennaio</option>
+            <option value="Febbraio">Febbraio</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Aprile">Aprile</option>
+            <option value="Maggio">Maggio</option>
+            <option value="Giugno">Giugno</option>
+            <option value="Luglio">Luglio</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Settembre">Settembre</option>
+            <option value="Ottobre">Ottobre</option>
+            <option value="Novembre">Novembre</option>
+            <option value="Dicembre">Dicembre</option>
+          </select>
+          <select
+            name="year"
+            id="year"
+            formControlName="year"
+            [ngClass]="{ selected: form.controls['year'].touched }"
+          >
+            <option value="">Year</option>
+            <option value="">Anno</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
+            <option value="1999">1999</option>
+            <option value="1998">1998</option>
+            <option value="1997">1997</option>
+            <option value="1996">1996</option>
+            <option value="1995">1995</option>
+            <option value="1994">1994</option>
+            <option value="1993">1993</option>
+            <option value="1992">1992</option>
+            <option value="1991">1991</option>
+            <option value="1990">1990</option>
+            <option value="1989">1989</option>
+            <option value="1988">1988</option>
+            <option value="1987">1987</option>
+            <option value="1986">1986</option>
+            <option value="1985">1985</option>
+            <option value="1984">1984</option>
+            <option value="1983">1983</option>
+            <option value="1982">1982</option>
+            <option value="1981">1981</option>
+            <option value="1980">1980</option>
+            <option value="1979">1979</option>
+            <option value="1978">1978</option>
+            <option value="1977">1977</option>
+            <option value="1976">1976</option>
+            <option value="1975">1975</option>
+            <option value="1974">1974</option>
+            <option value="1973">1973</option>
+            <option value="1972">1972</option>
+            <option value="1971">1971</option>
+            <option value="1970">1970</option>
+            <option value="1969">1969</option>
+            <option value="1968">1968</option>
+            <option value="1967">1967</option>
+            <option value="1966">1966</option>
+            <option value="1965">1965</option>
+            <option value="1964">1964</option>
+            <option value="1963">1963</option>
+            <option value="1962">1962</option>
+            <option value="1961">1961</option>
+            <option value="1960">1960</option>
+            <option value="1959">1959</option>
+            <option value="1958">1958</option>
+            <option value="1957">1957</option>
+            <option value="1956">1956</option>
+            <option value="1955">1955</option>
+            <option value="1954">1954</option>
+            <option value="1953">1953</option>
+            <option value="1952">1952</option>
+            <option value="1951">1951</option>
+            <option value="1950">1950</option>
+            <option value="1949">1949</option>
+            <option value="1948">1948</option>
+            <option value="1947">1947</option>
+            <option value="1946">1946</option>
+            <option value="1945">1945</option>
+            <option value="1944">1944</option>
+            <option value="1943">1943</option>
+            <option value="1942">1942</option>
+            <option value="1941">1941</option>
+            <option value="1940">1940</option>
+            <option value="1939">1939</option>
+            <option value="1938">1938</option>
+            <option value="1937">1937</option>
+            <option value="1936">1936</option>
+            <option value="1935">1935</option>
+            <option value="1934">1934</option>
+            <option value="1933">1933</option>
+            <option value="1932">1932</option>
+            <option value="1931">1931</option>
+            <option value="1930">1930</option>
+            <option value="1929">1929</option>
+            <option value="1928">1928</option>
+            <option value="1927">1927</option>
+            <option value="1926">1926</option>
+            <option value="1925">1925</option>
+            <option value="1924">1924</option>
+            <option value="1923">1923</option>
+            <option value="1922">1922</option>
+            <option value="1921">1921</option>
+            <option value="1920">1920</option>
+            <option value="1919">1919</option>
+            <option value="1918">1918</option>
+            <option value="1917">1917</option>
+            <option value="1916">1916</option>
+            <option value="1915">1915</option>
+            <option value="1914">1914</option>
+            <option value="1913">1913</option>
+            <option value="1912">1912</option>
+            <option value="1911">1911</option>
+            <option value="1910">1910</option>
+            <option value="1909">1909</option>
+            <option value="1908">1908</option>
+            <option value="1907">1907</option>
+            <option value="1906">1906</option>
+            <option value="1905">1905</option>
+            <option value="1904">1904</option>
+            <option value="1903">1903</option>
+            <option value="1902">1902</option>
+            <option value="1901">1901</option>
+            <option value="1900">1900</option>
+          </select>
+        </div>
+      </div>
+      <button class="submit" type="submit" [disabled]="!form.valid">
+        AVANTI
+      </button>
+    </form>
+    <div class="above-social">
+      <div class="separator"></div>
+      <p>oppure prosegui con</p>
+    </div>
+    <div class="social-logos display-flex-row">
+      <div id="facebook">
+        <img
+          src="../../../../../assets/homePage/footer/bottomFooter/social-icons/5279111_network_fb_social media_facebook_facebook logo_icon (1).png"
+          alt=""
+        />
+      </div>
+      <div id="apple">
+        <img
+          src="../../../../../assets/homePage/footer/bottomFooter/social-icons/104490_apple_icon.png"
+          alt="facebook"
+        />
+      </div>
+      <div id="steam">
+        <img
+          src="../../../../../assets/homePage/footer/bottomFooter/social-icons/steam_logo.png"
+        />
+      </div>
+      <div id="xbox">
+        <img
+          src="../../../../../assets/homePage/footer/bottomFooter/social-icons/1646935_game_xbox_icon.png"
+          alt=""
+        />
+      </div>
+      <div id="playstation">
+        <img
+          src="../../../../../assets/homePage/footer/bottomFooter/social-icons/294662_playstation_icon.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="footer">
+      <p>Hai già un account? <a href="#">Accedi</a></p>
+      <div class="last-link">
+        <a href="#">Vuoi creare un account EA per tuo figlio?</a>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M9.99996 1.66675C9.63177 1.66675 9.33329 1.96522 9.33329 2.33341C9.33329 2.7016 9.63177 3.00008 9.99996 3.00008H12.0292L8.86099 6.18047C8.60114 6.44131 8.60194 6.86342 8.86279 7.12327C9.12364 7.38313 9.54575 7.38232 9.8056 7.12147L13 3.91485V6.00008C13 6.36827 13.2984 6.66675 13.6666 6.66675C14.0348 6.66675 14.3333 6.36827 14.3333 6.00008V2.33341C14.3333 1.96522 14.0348 1.66675 13.6666 1.66675H9.99996ZM3.99996 4.66675C3.99996 4.29856 4.29844 4.00008 4.66663 4.00008H7.33329C7.70148 4.00008 7.99996 3.7016 7.99996 3.33341C7.99996 2.96522 7.70148 2.66675 7.33329 2.66675H4.66663C3.56206 2.66675 2.66663 3.56218 2.66663 4.66675V11.3334C2.66663 12.438 3.56206 13.3334 4.66663 13.3334H11.3333C12.4379 13.3334 13.3333 12.438 13.3333 11.3334V8.66675C13.3333 8.29856 13.0348 8.00008 12.6666 8.00008C12.2984 8.00008 12 8.29856 12 8.66675V11.3334C12 11.7016 11.7015 12.0001 11.3333 12.0001H4.66663C4.29844 12.0001 3.99996 11.7016 3.99996 11.3334V4.66675Z"
+            fill="#5288FD"
+          ></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
