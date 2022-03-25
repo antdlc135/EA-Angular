@@ -54,7 +54,6 @@ export class MainCardsComponent implements OnInit {
     onclickAndDefault(check);
 
     btn.forEach((el: any) => {
-      debugger;
       el.onclick = () => {
         if (check !== el) {
           onclickAndDefault(el);

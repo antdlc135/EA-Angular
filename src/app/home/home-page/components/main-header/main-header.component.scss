@@ -34,22 +34,22 @@ $breakpoints: (
   z-index: 1;
 }
 
-.divMainButton {
-  min-width: 160px;
-  min-height: 60px;
-  border: 2px solid black;
-  border-radius: 3px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: inherit;
-  transition: transform 200ms;
-  z-index: 0;
-}
+// .divMainButton {
+//   min-width: 160px;
+//   min-height: 60px;
+//   border: 2px solid black;
+//   border-radius: 3px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   background-color: inherit;
+//   transition: transform 200ms;
+//   z-index: 0;
+// }
 
 .mainHeaderWithLogo {
-  width: 60%;
-  margin-left: 5%;
+  margin-left: 15%;
+  width: 80%;
   color: white;
   font-size: 16px;
 }
@@ -70,12 +70,12 @@ $breakpoints: (
 .divMainButton {
   min-width: 160px;
   min-height: 60px;
-  border: 2px solid black;
+  // border: 2px solid black;
   border-radius: 3px;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: inherit;
+  background-color: #ff4747;
   transition: transform 200ms;
   z-index: 0;
 }
@@ -134,19 +134,19 @@ $breakpoints: (
 
 .mainHeader {
   @include media(">desktop") {
-    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-w1920.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-w1920.png");
   }
   @include media(">tablet", "<=desktop") {
-    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-max-w1456.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-max-w1456.png");
   }
   @include media(">handheld", "<=tablet") {
-    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-min-w1455.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-min-w1455.png");
   }
   @include media(">phone", "<=handheld") {
-    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-w1023.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-w1023.png");
   }
   @include media("<=phone") {
-    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-w320-768.jpg");
+    background-image: url("../../../../../assets/homePage/mainHeader/mainHeader-background-w320-768.png");
     background-position-y: top;
   }
   margin-top: 90px;
@@ -154,7 +154,7 @@ $breakpoints: (
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   & > .flexCol {
     & > div {
       display: flex;
@@ -194,9 +194,7 @@ $breakpoints: (
   color: white;
 }
 
-.mainHeader > div a > .divMainButton {
-  border-color: white;
-}
+// .mainHeader > div a > .s
 
 .mainHeader > div p {
   font-size: 24px;
@@ -270,7 +268,8 @@ $breakpoints: (
       text-decoration: none;
       color: white;
       & > .divMainButton {
-        border-color: white;
+        background-color: transparent;
+        border: 1px solid white;
         width: 200px;
         height: 20px;
         display: flex;
@@ -291,4 +290,8 @@ $breakpoints: (
   transition: opacity 500ms;
   position: absolute;
   opacity: 0;
+}
+
+.mainHeaderTitle {
+  font-size: 60px;
 }
