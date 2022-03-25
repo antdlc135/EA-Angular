@@ -1,0 +1,179 @@
+@import "../../../../shared/components/footer/footer.component.scss";
+
+// body {
+//   background-color: #1d2033;
+//   margin: 0;
+//   border: 0;
+//   width: 100%;
+//   height: 100%;
+//   box-shadow: none;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+//   font-size: 14px;
+// }
+
+a {
+  color: #5288fd;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.big-wrapper {
+  background-color: #1d2033;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.wrapper {
+  min-height: 80%;
+  min-width: 20%;
+  max-height: 900px;
+  max-width: 450px;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  text-align: center;
+}
+
+.wrapper p {
+  font-size: 14px;
+}
+.EA-logo {
+  width: 64px;
+}
+
+h1 {
+  color: white;
+  font-size: 1.5em;
+}
+
+form {
+  width: 100%;
+  row-gap: 20px;
+  text-align: left;
+  align-items: center;
+}
+.birthday {
+  width: 100%;
+}
+
+.birthday-select {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+select {
+  background-color: #141b20;
+  width: 100%;
+  height: 45px;
+  border: 3px solid rgb(118, 118, 118);
+  border-radius: 10px;
+  color: rgb(118, 118, 118);
+  font-size: 16px;
+  margin-top: 10px;
+  &:hover {
+    border-color: rgb(184, 182, 182);
+    color: white;
+    box-shadow: 1px 4px 15px 0px rgba(0, 0, 0, 0.59);
+    transition: 300ms;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  color: white;
+}
+
+#month {
+  margin: 10px 8px 0 8px;
+}
+
+.country-select,
+.birthday,
+.submit {
+  width: 100%;
+}
+
+option {
+  background-color: white;
+  color: black;
+}
+
+.submit {
+  height: 45px;
+  background-color: #343647;
+  border-radius: 10px;
+  color: rgb(118, 118, 118);
+  border: none;
+  cursor: not-allowed;
+}
+.country-select > select {
+  width: 100%;
+}
+
+.above-social {
+  color: rgb(118, 118, 118);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.above-social > p {
+  background-color: #1d2033;
+  position: absolute;
+  bottom: -20px;
+  right: 500;
+  padding: 10px;
+  z-index: 1;
+}
+
+.separator {
+  background-color: rgb(118, 118, 118);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.social-logos {
+  justify-content: space-around;
+  column-gap: 10px;
+}
+.social-logos img {
+  width: 30px;
+}
+
+.social-logos > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  &:hover {
+    transform: scale(0.95);
+    transition: 300ms;
+  }
+}
+
+#facebook {
+  background-color: #1877f2;
+}
+#apple {
+  background-color: white;
+}
+#steam {
+  background-color: black;
+}
+#xbox {
+  background-color: #107c10;
+}
+#playstation {
+  background-color: #0049a0;
+}

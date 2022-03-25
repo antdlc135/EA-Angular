@@ -1,0 +1,106 @@
+<div class="big-wrapper">
+  <div class="wrapper display-flex-column">
+    <img
+      class="EA-logo"
+      src="../../../../../assets/homePage/footer/bottomFooter/october-ea-ring.png"
+      alt="logo"
+    />
+    <h1>Accedi con il tuo account EA</h1>
+    <form [formGroup]="form" class="signUp display-flex-column">
+      <div class="phone">
+        <p>TELEFONO O E-MAIL</p>
+        <input
+          class="phone-input"
+          type="email"
+          placeholder="Inserisci numero di telefono o e-mail"
+          formControlName="email"
+          [style.border-color]="
+            form.controls['email'].touched && form.controls['email'].invalid
+              ? 'red'
+              : ''
+          "
+        />
+        <p
+          *ngIf="
+            form.controls['email'].touched && form.controls['email'].invalid
+          "
+          class="email-invalid text-danger"
+        >
+          Il tuo indirizzo e-mail non è valido
+        </p>
+      </div>
+      <div class="password">
+        <p>PASSWORD</p>
+        <div class="password-input">
+          <input
+            type="password"
+            placeholder="Inserisci la password"
+            formControlName="password"
+          />
+        </div>
+      </div>
+      <div class="check">
+        <input type="checkbox" name="remember" id="remember" checked />
+        <label for="remember">Ricordami</label>
+      </div>
+      <button class="submit" type="submit">ACCEDI</button>
+    </form>
+    <div class="link-under-button">
+      <a href="#">Hai bisogno di aiuto per accedere?</a>
+    </div>
+    <div class="above-social">
+      <div class="separator"></div>
+      <p>oppure prosegui con</p>
+    </div>
+    <div class="social-logos display-flex-row">
+      <div id="facebook">
+        <img
+          src="../../../../../assets/homePage/footer/bottomFooter/social-icons/5279111_network_fb_social media_facebook_facebook logo_icon (1).png"
+          alt=""
+        />
+      </div>
+      <div id="apple">
+        <img
+          src="../../../../../assets/homePage/footer/bottomFooter/social-icons/104490_apple_icon.png"
+          alt="facebook"
+        />
+      </div>
+      <div id="steam">
+        <img
+          src="../../../../../assets/homePage/footer/bottomFooter/social-icons/steam_logo.png"
+        />
+      </div>
+      <div id="xbox">
+        <img
+          src="../../../../../assets/homePage/footer/bottomFooter/social-icons/1646935_game_xbox_icon.png"
+          alt=""
+        />
+      </div>
+      <div id="playstation">
+        <img
+          src="../../../../../assets/homePage/footer/bottomFooter/social-icons/294662_playstation_icon.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Sei nuovo su EA? <a href="#" routerLink="/signup">Crea un account EA </a
+        ><svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M9.99996 1.66675C9.63177 1.66675 9.33329 1.96522 9.33329 2.33341C9.33329 2.7016 9.63177 3.00008 9.99996 3.00008H12.0292L8.86099 6.18047C8.60114 6.44131 8.60194 6.86342 8.86279 7.12327C9.12364 7.38313 9.54575 7.38232 9.8056 7.12147L13 3.91485V6.00008C13 6.36827 13.2984 6.66675 13.6666 6.66675C14.0348 6.66675 14.3333 6.36827 14.3333 6.00008V2.33341C14.3333 1.96522 14.0348 1.66675 13.6666 1.66675H9.99996ZM3.99996 4.66675C3.99996 4.29856 4.29844 4.00008 4.66663 4.00008H7.33329C7.70148 4.00008 7.99996 3.7016 7.99996 3.33341C7.99996 2.96522 7.70148 2.66675 7.33329 2.66675H4.66663C3.56206 2.66675 2.66663 3.56218 2.66663 4.66675V11.3334C2.66663 12.438 3.56206 13.3334 4.66663 13.3334H11.3333C12.4379 13.3334 13.3333 12.438 13.3333 11.3334V8.66675C13.3333 8.29856 13.0348 8.00008 12.6666 8.00008C12.2984 8.00008 12 8.29856 12 8.66675V11.3334C12 11.7016 11.7015 12.0001 11.3333 12.0001H4.66663C4.29844 12.0001 3.99996 11.7016 3.99996 11.3334V4.66675Z"
+            fill="#5288FD"
+          ></path>
+        </svg>
+      </p>
+    </div>
+  </div>
+</div>

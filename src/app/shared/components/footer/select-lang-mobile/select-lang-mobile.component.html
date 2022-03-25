@@ -1,0 +1,28 @@
+<div class="lang-mobile">
+  <select (change)="changeCountry($event)" class="lang-mobile-select">
+    <option
+      *ngFor="let singleData of selectData"
+      [attr.data-flag]="singleData.img"
+      [attr.data-id]="singleData.id"
+      [attr.data-span]="singleData.span"
+      value="{{ singleData.id }}"
+    >
+      {{ singleData.span }}
+    </option>
+  </select>
+  <span>{{ title }}</span>
+  <div class="country">
+    <img
+      *ngIf="title === 'Lingua'"
+      class="lang-mobile-flag"
+      src="{{ countryFlag }}"
+      alt="flag"
+    />
+    <span id="mob-lang-span" class="lang-mobile-span">Italia</span>
+    <img
+      src="../../assets/homePage/footer/bottomFooter/down-arrow.png"
+      alt="down-arrow"
+      class="lang-mobile-arrow"
+    />
+  </div>
+</div>

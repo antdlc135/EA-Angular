@@ -1,0 +1,218 @@
+@import "../../../../shared/components/footer/footer.component.scss";
+
+// body {
+//   background-color: #1d2033;
+//   margin: 0;
+//   border: 0;
+//   width: 100%;
+//   height: 100%;
+//   box-shadow: none;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+//   font-size: 14px;
+// }
+
+a {
+  color: #5288fd;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.big-wrapper {
+  height: 100vh;
+  background-color: #1d2033;
+  box-sizing: border-box;
+  overflow: scroll;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+.wrapper {
+  min-height: 80%;
+  min-width: 20%;
+  max-height: 900px;
+  max-width: 450px;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  text-align: center;
+}
+
+.wrapper p {
+  font-size: 14px;
+}
+.EA-logo {
+  width: 64px;
+}
+
+h1 {
+  color: white;
+  font-size: 1.5em;
+}
+
+form {
+  width: 100%;
+  row-gap: 20px;
+  text-align: left;
+  align-items: center;
+}
+.password {
+  width: 100%;
+}
+
+.text-danger {
+  color: red;
+}
+.danger {
+  border: 3px solid red;
+}
+.no-danger {
+}
+
+.phone-input,
+.password input {
+  background-color: #141b20;
+  width: 100%;
+  height: 45px;
+  border: 3px solid rgb(118, 118, 118);
+  border-radius: 10px;
+  color: rgb(118, 118, 118);
+  font-size: 16px;
+  margin-top: 10px;
+  &:hover {
+    border-color: rgb(184, 182, 182);
+    color: white;
+    box-shadow: 1px 4px 15px 0px rgba(0, 0, 0, 0.59);
+    transition: 300ms;
+    cursor: pointer;
+  }
+}
+
+.check {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 15px 0 15px 10px;
+}
+.check > input {
+  margin-right: 15px;
+  font-size: 20px;
+  transform: scale(2);
+  background-color: #0049a0;
+  box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0.363);
+}
+.selected {
+  color: white;
+}
+
+#month {
+  margin: 10px 8px 0 8px;
+}
+
+.phone,
+.password,
+.submit {
+  width: 100%;
+}
+
+option {
+  background-color: white;
+  color: black;
+}
+
+.submit {
+  height: 45px;
+  background-color: #235fe3;
+  border-radius: 10px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 5px 0 5px 0;
+  &:hover {
+    background-color: #1f55ca;
+    box-shadow: 0px 0px 35px 0px rgba(41, 36, 112, 0.644);
+  }
+}
+.phone > select {
+  width: 100%;
+}
+
+.above-social {
+  color: rgb(118, 118, 118);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.above-social > p {
+  background-color: #1d2033;
+  position: absolute;
+  bottom: -20px;
+  right: 500;
+  padding: 10px;
+  z-index: 1;
+}
+
+.separator {
+  background-color: rgb(118, 118, 118);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.social-logos {
+  justify-content: space-around;
+  column-gap: 10px;
+}
+.social-logos img {
+  width: 30px;
+}
+
+.social-logos > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  &:hover {
+    transform: scale(0.95);
+    transition: 300ms;
+  }
+}
+
+.last-link {
+  display: inline;
+}
+
+#facebook {
+  background-color: #1877f2;
+}
+#apple {
+  background-color: white;
+}
+#steam {
+  background-color: black;
+}
+#xbox {
+  background-color: #107c10;
+}
+#playstation {
+  background-color: #0049a0;
+}
