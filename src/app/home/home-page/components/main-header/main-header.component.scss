@@ -294,4 +294,13 @@ $breakpoints: (
 
 .mainHeaderTitle {
   font-size: 60px;
+  @include media("<=phone") {
+    font-size: 30px;
+  }
+}
+
+.mainHeaderWithLogo {
+  @include media("<=phone") {
+    margin-top: 250px;
+  }
 }
