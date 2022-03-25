@@ -54,6 +54,8 @@ export class SelectLanguageComponent implements OnInit, OnChanges {
       this.langName = span;
       this.priceMobile = span;
     } else if (this.languageOpened) {
+      let mobLang: any = document.querySelector('#mob-lang #mob-lang-span');
+      mobLang.textContent = span;
       this.langName = span;
       this.langFlag = img;
       this.flagMobile = img;

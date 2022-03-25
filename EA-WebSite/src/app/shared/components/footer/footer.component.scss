@@ -71,7 +71,10 @@ footer > section {
 }
 
 .bottom-footer-links {
-  flex-basis: 80%;
+  flex-basis: 70%;
+}
+.bottom-footer-links * {
+  padding: 0 5px 0 5px;
 }
 footer > section > div {
   max-width: 1140px;
@@ -314,7 +317,7 @@ h6,
 .a-bottom-footer {
   /*links bottom footer in grassetto*/
   font-family: var(--bottom-footer-font);
-  font-size: 1.12rem;
+  font-size: 1.2rem;
 }
 .text-legal-footer {
   /*links legal footer*/
